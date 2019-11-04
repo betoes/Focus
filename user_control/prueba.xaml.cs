@@ -24,5 +24,7 @@ namespace SysCredito.user_control
         {
             InitializeComponent();
         }
+
+
     }
 }
