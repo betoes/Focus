@@ -21,5 +21,8 @@ C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\SysCredito.csproj.CopyCom
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\SysCredito.exe
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\SysCredito.pdb
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\user_control\prueba.g.cs
-C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\user_control\prueba.baml
+C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
+C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\GeneratedInternalTypeHelper.g.cs
