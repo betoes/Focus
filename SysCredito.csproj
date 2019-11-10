@@ -64,11 +64,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="domain\Asesor.cs" />
+    <Compile Include="domain\Cliente.cs" />
     <Compile Include="domain\SolicitudDeCredito.cs" />
     <Compile Include="user_control\prueba.xaml.cs">
       <DependentUpon>prueba.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ventana\vtnLogin.cs" />
+    <Compile Include="user_control\login.xaml.cs">
+      <DependentUpon>login.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,6 +86,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="user_control\prueba.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,6 +124,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ventana\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

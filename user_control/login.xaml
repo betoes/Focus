@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="SysCredito.user_control.login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             HorizontalAlignment="Stretch"
+	         VerticalAlignment="Stretch"
+	         HorizontalContentAlignment="Stretch"
+	         VerticalContentAlignment="Stretch"
+             Height="auto"
+             Width="auto">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid>
+                    <Label VerticalAlignment="Top"  Margin="200 50 0 0">Usuario</Label>
+                </Grid>
+                <Grid>
+                    <TextBox x:Name="txt_Usuario" VerticalAlignment="Center" Margin="202 50 200 0" Height="25"></TextBox>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid>
+                    <Label VerticalAlignment="Top"  Margin="200 0">Contraseña</Label>
+                </Grid>
+                <Grid>
+                    <PasswordBox x:Name="txt_Password" VerticalAlignment="Center" Margin="202 0 200 50" Height="25"></PasswordBox>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Height="40" Width="150" Margin="150 0 10 100" Click="iniciarSesion">Login</Button>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Height="40" Width="150" Margin="10 0 150 100">Cancelar</Button>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+        
+    </Grid>
+
+
+</UserControl>

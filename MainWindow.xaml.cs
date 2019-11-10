@@ -24,5 +24,10 @@ namespace SysCredito
         {
             InitializeComponent();
         }
+
+        private void Login_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
