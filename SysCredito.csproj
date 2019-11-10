@@ -73,6 +73,24 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="domain\SolicitudDeCredito.cs" />
+    <Compile Include="user_control\GUIAmortizacion.xaml.cs">
+      <DependentUpon>GUIAmortizacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUICaratulaContrato.xaml.cs">
+      <DependentUpon>GUICaratulaContrato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIDatosTrabajo.xaml.cs">
+      <DependentUpon>GUIDatosTrabajo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIRegistroClientes.xaml.cs">
+      <DependentUpon>GUIRegistroClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIRegistroMonto_Condiciones.xaml.cs">
+      <DependentUpon>GUIRegistroMonto_Condiciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUISolicitudesGenerales.xaml.cs">
+      <DependentUpon>GUISolicitudesGenerales.xaml</DependentUpon>
+    </Compile>
     <Compile Include="user_control\prueba.xaml.cs">
       <DependentUpon>prueba.xaml</DependentUpon>
     </Compile>
@@ -89,6 +107,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="user_control\GUIAmortizacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUICaratulaContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIDatosTrabajo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIRegistroClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIRegistroMonto_Condiciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUISolicitudesGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="user_control\prueba.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

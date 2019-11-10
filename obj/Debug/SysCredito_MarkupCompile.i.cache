@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\
+C:\Users\marai\Documents\7-Desarrollo de software\Focus\obj\Debug\
 SysCredito
 none
 false
 DEBUG;TRACE
-C:\Users\Beto Lafarc\source\repos\SysCredito\App.xaml
-2-785669964
+C:\Users\marai\Documents\7-Desarrollo de software\Focus\App.xaml
+8458842558
 
-12-975154432
-20-1226582921
-MainWindow.xaml;user_control\prueba.xaml;
+18100774205
+18540684206
+MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\prueba.xaml;
 
-False
+True
 
