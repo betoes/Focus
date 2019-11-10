@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.2.0.325, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignColors.1.2.0\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -44,8 +47,13 @@
     <Reference Include="ShowMeTheXAML, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\ShowMeTheXAML.1.0.12\lib\net45\ShowMeTheXAML.dll</HintPath>
     </Reference>
+    <Reference Include="ShowMeTheXAML.AvalonEdit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ShowMeTheXAML.AvalonEdit.1.0.12\lib\net45\ShowMeTheXAML.AvalonEdit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -67,6 +75,24 @@
     <Compile Include="domain\Asesor.cs" />
     <Compile Include="domain\Cliente.cs" />
     <Compile Include="domain\SolicitudDeCredito.cs" />
+    <Compile Include="user_control\GUIAmortizacion.xaml.cs">
+      <DependentUpon>GUIAmortizacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUICaratulaContrato.xaml.cs">
+      <DependentUpon>GUICaratulaContrato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIDatosTrabajo.xaml.cs">
+      <DependentUpon>GUIDatosTrabajo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIRegistroClientes.xaml.cs">
+      <DependentUpon>GUIRegistroClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIRegistroMonto_Condiciones.xaml.cs">
+      <DependentUpon>GUIRegistroMonto_Condiciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUISolicitudesGenerales.xaml.cs">
+      <DependentUpon>GUISolicitudesGenerales.xaml</DependentUpon>
+    </Compile>
     <Compile Include="user_control\prueba.xaml.cs">
       <DependentUpon>prueba.xaml</DependentUpon>
     </Compile>
@@ -85,6 +111,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="user_control\GUIAmortizacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUICaratulaContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIDatosTrabajo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIRegistroClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIRegistroMonto_Condiciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUISolicitudesGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="user_control\prueba.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

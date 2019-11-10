@@ -9,30 +9,25 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SysCredito
+namespace SysCredito.user_control
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para GUIDatosTrabajo.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GUIDatosTrabajo : UserControl
     {
-        
-        public MainWindow()
+        public GUIDatosTrabajo()
         {
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-        private void Login_Loaded(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
-=======
->>>>>>> 8f9ac487abefafb06bb3dff13ae102aaed4f58cd
     }
 }
