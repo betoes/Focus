@@ -21,18 +21,11 @@ namespace SysCredito
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-        private void Login_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-=======
->>>>>>> 8f9ac487abefafb06bb3dff13ae102aaed4f58cd
     }
 }
