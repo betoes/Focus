@@ -84,6 +84,9 @@
     <Compile Include="user_control\GUIDatosTrabajo.xaml.cs">
       <DependentUpon>GUIDatosTrabajo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="user_control\GUIRegistrarDireccion.xaml.cs">
+      <DependentUpon>GUIRegistrarDireccion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="user_control\GUIRegistroClientes.xaml.cs">
       <DependentUpon>GUIRegistroClientes.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="user_control\GUIDatosTrabajo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIRegistrarDireccion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

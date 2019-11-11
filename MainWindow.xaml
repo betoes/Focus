@@ -23,7 +23,7 @@
             <MenuItem Header="_Solicitudes"></MenuItem>
             <MenuItem Header="_Cerrar Sesión"></MenuItem>
         </Menu>
-        <uc:prueba></uc:prueba>
+        <uc:GUIRegistrarDireccion></uc:GUIRegistrarDireccion>
     </DockPanel>
 
     
