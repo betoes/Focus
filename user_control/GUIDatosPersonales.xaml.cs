@@ -16,21 +16,18 @@ using System.Windows.Shapes;
 namespace SysCredito.user_control
 {
     /// <summary>
-    /// Lógica de interacción para GUIRegistrarDireccion.xaml
+    /// Lógica de interacción para GUIDatosPersonales.xaml
     /// </summary>
-    public partial class GUIRegistrarDireccion : UserControl
+    public partial class GUIDatosPersonales : UserControl
     {
-        public GUIRegistrarDireccion()
+        public GUIDatosPersonales()
         {
+
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
         }
 
-        private void btnAtras_Click(object sender, RoutedEventArgs e)
+        private void Siguiente(object sender, RoutedEventArgs e)
         {
 
         }

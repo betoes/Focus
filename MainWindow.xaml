@@ -21,8 +21,9 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Cliente"></MenuItem>
             <MenuItem Header="_Solicitudes"></MenuItem>
-            <MenuItem Header="_Cerrar Sesión"></MenuItem>
+            <MenuItem Header="_Cerrar Sesión" Click="MenuItem_Click"></MenuItem>
         </Menu>
+
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -36,6 +37,7 @@
             </Grid>
         </Grid>
         
+
     </DockPanel>
 
     

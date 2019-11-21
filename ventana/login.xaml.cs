@@ -15,14 +15,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SysCredito.user_control
+namespace SysCredito.ventana
 {
     /// <summary>
     /// Lógica de interacción para UserControl1.xaml
     /// </summary>
-    public partial class login : UserControl
+    public partial class login : Window
     {
-        private Resultado res;
         public login()
         {
             InitializeComponent();
@@ -30,24 +29,28 @@ namespace SysCredito.user_control
 
         private void iniciarSesion(object sender, RoutedEventArgs e)
         {
-            if (txt_Usuario.Text != null && txt_Password.Password != null)
-            {
-                String query = "SELECT * FROM dbo.usuariosistema WHERE idusuariosistema=" + this.txt_Usuario + "AND claveacceso=" + this.txt_Password;
-                res = ConsultaDAO.ejecutarConsulta(query);
-                if (res.Err)
-                {
-                    res.Numregistros = 0;
-                    MessageBox.Show(res.MensajeError, "Error al iniciar sesion");
-                }
-                else if (res.Afectardatos)
-                {
 
-                    MessageBox.Show("Sesión iniciada");
+            UsuarioSistemaDAO usuarioSistemaDAO = new UsuarioSistemaDAO();
+            String user = txt_Usuario.Text;
+            String pass = txt_Password.Password;
+
+            if (user != "" && pass != "")
+            {
+
+                int inicio = usuarioSistemaDAO.login(user, pass);
+
+                if (inicio == 1)
+                {
+                    GUIcliente cliente = new GUIcliente();
+                    cliente.Show();
                 }
-                
+                else
+                {
+                    MessageBox.Show("No se encontro a ningun usuario dentro del sistema");
+                }
             } else
             {
-                MessageBox.Show("Ingrese los datos para iniciar sesion");
+                MessageBox.Show("Ingrese un usuario y una contraseña");
             }
         }
 
