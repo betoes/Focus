@@ -38,6 +38,5 @@ namespace SysCredito.model.db
             return conn;
         }
 
-
     }
 }

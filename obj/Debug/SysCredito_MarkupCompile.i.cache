@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\App.xaml
-91069103904
+11799513254
 
-20-1438613115
-18-2045337939
-MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\prueba.xaml;user_control\login.xaml;
+23-623883019
+201078175547
+MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\prueba.xaml;ventana\GUIcliente.xaml;ventana\login.xaml;
 
-True
+False
 

@@ -16,14 +16,20 @@ using System.Windows.Shapes;
 namespace SysCredito.user_control
 {
     /// <summary>
-    /// Lógica de interacción para GUIDatosTrabajo.xaml
+    /// Lógica de interacción para GUIDatosPersonales.xaml
     /// </summary>
-    public partial class GUIDatosTrabajo : UserControl
+    public partial class GUIDatosPersonales : UserControl
     {
-        public GUIDatosTrabajo()
+        public GUIDatosPersonales()
         {
+
             InitializeComponent();
+
         }
 
+        private void Siguiente(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

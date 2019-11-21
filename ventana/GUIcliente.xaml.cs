@@ -10,19 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SysCredito.user_control;
 
-namespace SysCredito.user_control
+
+namespace SysCredito.ventana
 {
     /// <summary>
-    /// Lógica de interacción para GUIDatosTrabajo.xaml
+    /// Lógica de interacción para GUImenu.xaml
     /// </summary>
-    public partial class GUIDatosTrabajo : UserControl
+    public partial class GUIcliente : Window
     {
-        public GUIDatosTrabajo()
+        public GUIcliente()
         {
+
             InitializeComponent();
+            GUIDatosPersonales datosPersonales = new GUIDatosPersonales();
+            this.Hide();
+            SPpage.Children.Add(datosPersonales);
+            tbDatosPersonales.Background = Brushes.White;
+            tbDatosPersonales.Foreground = Brushes.Black;
+
+
         }
 
     }

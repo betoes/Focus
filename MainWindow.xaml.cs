@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SysCredito.ventana;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace SysCredito
 {
     /// <summary>
@@ -24,8 +26,14 @@ namespace SysCredito
 
         public MainWindow()
         {
-            InitializeComponent();
+            login log = new login();
+            log.Show();
         }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            GUIcliente cliente = new GUIcliente();
+            cliente.Show();
+        }
     }
 }
