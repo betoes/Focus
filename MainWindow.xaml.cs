@@ -1,4 +1,4 @@
-﻿using SysCredito.ventana;
+﻿using SysCredito.model.dao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,30 +10,55 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using SysCredito.ventana;
 
 namespace SysCredito
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para UserControl1.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-
         public MainWindow()
         {
-            login log = new login();
-            log.Show();
+            InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void iniciarSesion(object sender, RoutedEventArgs e)
         {
-            GUIcliente cliente = new GUIcliente();
-            cliente.Show();
+
+            String user = txt_Usuario.Text;
+            String pass = txt_Password.Password;
+
+            if (user != "" && pass != "")
+            {
+
+                int inicio = UsuarioSistemaDAO.login(user, pass);
+
+                if (inicio > 0)
+                {
+                    GUIAsesorprincipal guiAsesorprincipal = new GUIAsesorprincipal();
+                    guiAsesorprincipal.Show();
+                    closeWindows();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro a ningun usuario dentro del sistema");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un usuario y una contraseña");
+            }
         }
+
+        public void closeWindows()
+        {
+            this.Close();
+        }
+
     }
 }

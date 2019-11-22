@@ -17,6 +17,7 @@ namespace SysCredito.model.db
 
         public static SqlConnection getConnection()
         {
+
             SqlConnection conn = null;
             try
             {
