@@ -1,0 +1,150 @@
+﻿<UserControl x:Class="SysCredito.user_control.GUIRegistrarDireccion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SysCredito.user_control"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Menu Background="#3F51B5" Foreground="White" IsEnabled="False" >
+                <MenuItem Header="_Datos personales"></MenuItem>
+                <MenuItem Header="_Datos de identificacion"></MenuItem>
+                <MenuItem Header="_Datos de dirección" Background="White" Foreground="Black"></MenuItem>
+                <MenuItem Header="_Datos de trabajo"></MenuItem>
+                <MenuItem Header="_Datos bancarios"></MenuItem>
+                <MenuItem Header="_Datos de contacto"></MenuItem>
+            </Menu>
+        </Grid>
+
+        <Grid Grid.Column="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" VerticalAlignment="Center">
+                <Label Content="Datos de dirección" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="20"/>
+            </Grid>
+            <Grid Grid.Row="1" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Calle:" HorizontalAlignment="Right" Margin="10 0 0 0"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="txtCalle" Margin="0 0 50 0"/>
+                </Grid>
+                
+            </Grid>
+            <Grid Grid.Row="2" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Colonia:" HorizontalAlignment="Right" Margin="10 0 0 0"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="txtColonia" Margin="0 0 50 0"/>
+                </Grid>
+                
+                
+            </Grid>
+            <Grid Grid.Row="3" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Numero Ext.:" HorizontalAlignment="Right" Margin="10 0 0 0"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="txtNumExt" Margin="0 0 50 0"/>
+                </Grid>
+                
+                
+
+            </Grid>
+            <Grid Grid.Row="4" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Numero Int. (Opcional):" HorizontalAlignment="Right" Margin="10 0 0 0"/>
+                    
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="txtNumInt" Margin="0 0 50 0"/>
+                    
+                </Grid>
+                
+                
+            </Grid>
+            <Grid Grid.Row="5" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Estado o Entidad:" HorizontalAlignment="Right" Margin="10 0 0 0"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <ComboBox x:Name="cbEstado" Margin="0 0 50 0"/>
+                </Grid>
+                
+                
+
+            </Grid>
+            <Grid Grid.Row="6" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Municipio:" HorizontalAlignment="Right" Margin="10 0 0 0"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <ComboBox x:Name="cbMunicipio" Margin="0 0 50 0"/>
+                </Grid>
+            </Grid>
+
+
+
+            <Grid Grid.Row="7" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Button x:Name="btnAtras" Content="Atrás" Background="#303F9F" Height="32" Width="auto" Click="btnAtras_Click" Margin="20 0 20 0"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button x:Name="btnSiguiente" Content="Siguiente" Background="#303F9F" Height="32" Width="auto" Margin="20 0 20 0"/>
+                </Grid>
+
+            </Grid>
+ 
+
+        </Grid>
+        
+
+
+    </Grid>
+</UserControl>

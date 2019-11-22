@@ -14,7 +14,7 @@
          TextOptions.TextRenderingMode="Auto"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Loging" Height="450" Width="800">
+        Title="MainWindow" Height="720" Width="1080">
 
 
     <DockPanel>
@@ -23,7 +23,21 @@
             <MenuItem Header="_Solicitudes"></MenuItem>
             <MenuItem Header="_Cerrar Sesión" Click="MenuItem_Click"></MenuItem>
         </Menu>
-        <uc:prueba></uc:prueba>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <uc:GUIRegistrarDireccion></uc:GUIRegistrarDireccion>
+            </Grid>
+        </Grid>
+        
+
     </DockPanel>
 
     
