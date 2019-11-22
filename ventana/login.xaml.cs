@@ -36,10 +36,10 @@ namespace SysCredito.ventana
 
             if (user != "" && pass != "")
             {
-
+               
                 int inicio = usuarioSistemaDAO.login(user, pass);
 
-                if (inicio == 1)
+                if (inicio > 0)
                 {
                     GUIcliente cliente = new GUIcliente();
                     cliente.Show();

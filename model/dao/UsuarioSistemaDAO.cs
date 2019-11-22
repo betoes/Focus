@@ -23,7 +23,7 @@ namespace SysCredito.model.dao
             try
             {
                
-                conn = ConnectionUtils.getConnection();
+                    conn = ConnectionUtils.getConnection();
 
                     SqlCommand command = new SqlCommand(Login_query, conn);
 
@@ -32,6 +32,7 @@ namespace SysCredito.model.dao
 
                     res = command.ExecuteNonQuery();
                 
+                    
             } catch (Exception ex)
             {
                 String err = ex.Message;

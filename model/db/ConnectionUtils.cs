@@ -11,7 +11,7 @@ namespace SysCredito.model.db
     {
         private static String SERVER = "localhost";
         private static String PORT = "1433";
-        private static String DATABASE = "FOCUS";
+        private static String DATABASE = "focus";
         private static String USER = "sa";
         private static String PASSWORD = "sh1234*";
 
