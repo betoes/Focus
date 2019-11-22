@@ -89,15 +89,6 @@
     <Compile Include="user_control\GUIDatosTrabajo.xaml.cs">
       <DependentUpon>GUIDatosTrabajo.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="user_control\GUIDocumentosIdentificacion.xaml.cs">
-      <DependentUpon>GUIDocumentosIdentificacion.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="user_control\GUIRegistrarDireccion.xaml.cs">
-      <DependentUpon>GUIRegistrarDireccion.xaml</DependentUpon>
-    </Compile>
-=======
->>>>>>> 083408130f69825cfa57b1a5aa94b707e3970df9
     <Compile Include="user_control\GUIRegistroClientes.xaml.cs">
       <DependentUpon>GUIRegistroClientes.xaml</DependentUpon>
     </Compile>
@@ -140,15 +131,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-<<<<<<< HEAD
-    <Page Include="user_control\GUIDocumentosIdentificacion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="user_control\GUIRegistrarDireccion.xaml">
-=======
     <Page Include="user_control\GUIDatosTrabajo.xaml">
->>>>>>> 083408130f69825cfa57b1a5aa94b707e3970df9
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
