@@ -78,3 +78,5 @@ C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIcliente.g.cs
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\user_control\GUIDatosPersonales.baml
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIcliente.baml
+C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIAsesorprincipal.g.cs
+C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIAsesorprincipal.baml

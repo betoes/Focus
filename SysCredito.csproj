@@ -101,11 +101,11 @@
     <Compile Include="user_control\prueba.xaml.cs">
       <DependentUpon>prueba.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ventana\GUIAsesorprincipal.xaml.cs">
+      <DependentUpon>GUIAsesorprincipal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ventana\GUIcliente.xaml.cs">
       <DependentUpon>GUIcliente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ventana\login.xaml.cs">
-      <DependentUpon>login.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -151,18 +151,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ventana\GUIcliente.xaml">
+    <Page Include="ventana\GUIAsesorprincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ventana\login.xaml">
+    <Page Include="ventana\GUIcliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\db\ConnectionUtils.cs" />
-    <Compile Include="Resultado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

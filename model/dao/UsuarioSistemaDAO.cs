@@ -11,27 +11,39 @@ namespace SysCredito.model.dao
 {
     class UsuarioSistemaDAO
     {
-        private String Login_query = "SELECT * FROM dbo.usuariosistema WHERE numempleado = @usuario AND claveacceso = @pass";
+        private static String login_query = "SELECT * FROM dbo.usuariosistema WHERE numempleado = @usuario AND claveacceso = @pass";
+        private static int registros;
 
         public UsuarioSistemaDAO() { }        
 
-        public int login(String user, String pass)
+        public static int login(String user, String pass)
         {
             SqlConnection conn = null;
-            int res = 0;
+            SqlCommand command;
+            SqlDataReader reader = null;
 
             try
             {
-               
+
                 conn = ConnectionUtils.getConnection();
 
-                    SqlCommand command = new SqlCommand(Login_query, conn);
+                command = new SqlCommand(login_query, conn);
 
-                    command.Parameters.AddWithValue("@usuario", user);
-                    command.Parameters.AddWithValue("@pass", pass);
+                command.Parameters.AddWithValue("@usuario", user);
+                command.Parameters.AddWithValue("@pass", pass);
 
-                    res = command.ExecuteNonQuery();
-                
+
+                reader = command.ExecuteReader();
+
+                List<String[]> datos = new List<string[]>();
+                while (reader.Read())
+                {
+                    registros++;
+                }
+
+                return registros;
+
+
             } catch (Exception ex)
             {
                 String err = ex.Message;
@@ -44,7 +56,7 @@ namespace SysCredito.model.dao
                 }
             }
 
-            return res;
+            return registros;
 
         }
 

@@ -9,21 +9,12 @@ SysCredito
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-C:\Users\Beto Lafarc\Documents\GitHub\Focus\App.xaml
-11-236696486
-
-22-1986457005
-201774281882
-MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIDocumentosIdentificacion.xaml;user_control\GUIRegistrarDireccion.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\prueba.xaml;user_control\login.xaml;
-=======
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\App.xaml
-11799513254
+11129170579
 
-23-623883019
+222004580976
 201078175547
-MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\prueba.xaml;ventana\GUIcliente.xaml;ventana\login.xaml;
->>>>>>> 083408130f69825cfa57b1a5aa94b707e3970df9
+MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;
 
-False
+True
 
