@@ -76,6 +76,7 @@
     <Compile Include="domain\Cliente.cs" />
     <Compile Include="domain\DatosPersonales.cs" />
     <Compile Include="domain\SolicitudDeCredito.cs" />
+    <Compile Include="domain\UsuarioSistema.cs" />
     <Compile Include="model\dao\UsuarioSistemaDAO.cs" />
     <Compile Include="user_control\GUIAmortizacion.xaml.cs">
       <DependentUpon>GUIAmortizacion.xaml</DependentUpon>

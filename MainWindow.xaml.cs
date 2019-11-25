@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SysCredito.ventana;
+using SysCredito.domain;
 
 namespace SysCredito
 {
@@ -32,21 +33,45 @@ namespace SysCredito
 
             String user = txt_Usuario.Text;
             String pass = txt_Password.Password;
+            UsuarioSistema usuarioSistema;
 
             if (user != "" && pass != "")
             {
 
-                int inicio = UsuarioSistemaDAO.login(user, pass);
+                try
+                {
+                    usuarioSistema = UsuarioSistemaDAO.login(user, pass);
 
-                if (inicio > 0)
-                {
-                    GUIAsesorprincipal guiAsesorprincipal = new GUIAsesorprincipal();
-                    guiAsesorprincipal.Show();
-                    closeWindows();
+                    if (usuarioSistema == null)
+                    {
+                        MessageBox.Show(" No existe el usuario  ");
+                    }
+                    else
+                    {
+
+                        int rol = usuarioSistema.Rol;
+
+                        switch (rol)
+                        {
+                            case 1:
+                                GUIAsesorprincipal guiAsesorprincipal = new GUIAsesorprincipal();
+                                guiAsesorprincipal.Show();
+                                closeWindows();
+                                break;
+
+                            case 2:
+                                GUIcliente guiCliente = new GUIcliente();
+                                guiCliente.Show();
+                                closeWindows();
+                                break;
+
+                        }
+
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No se encontro a ningun usuario dentro del sistema");
+                    String str = ex.Message;
                 }
             }
             else
@@ -54,6 +79,7 @@ namespace SysCredito
                 MessageBox.Show("Ingrese un usuario y una contraseña");
             }
         }
+        
 
         public void closeWindows()
         {

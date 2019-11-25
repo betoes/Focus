@@ -6,21 +6,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SysCredito.domain;
+using System.Globalization;
 
 namespace SysCredito.model.dao
 {
     class UsuarioSistemaDAO
     {
         private static String login_query = "SELECT * FROM dbo.usuariosistema WHERE numempleado = @usuario AND claveacceso = @pass";
-        private static int registros;
 
-        public UsuarioSistemaDAO() { }        
-
-        public static int login(String user, String pass)
+        public static UsuarioSistema login(String user, String pass)
         {
             SqlConnection conn = null;
             SqlCommand command;
             SqlDataReader reader = null;
+            UsuarioSistema usuarioSistema = new UsuarioSistema();
+
 
             try
             {
@@ -35,14 +36,21 @@ namespace SysCredito.model.dao
 
                 reader = command.ExecuteReader();
 
-                List<String[]> datos = new List<string[]>();
-                while (reader.Read())
+                if (reader.Read())
                 {
-                    registros++;
+
+
+                    usuarioSistema.Usuario = reader["numempleado"].ToString();
+                    usuarioSistema.Password = reader["claveacceso"].ToString();
+                    usuarioSistema.Fecharegistro = (DateTime) reader["fecharegistro"];
+                    usuarioSistema.Rol = (int) reader["rol_idrol"];
+
+                    return usuarioSistema;
+
+
                 }
-
-                return registros;
-
+                reader.NextResult();
+                usuarioSistema = null;
 
             } catch (Exception ex)
             {
@@ -56,7 +64,7 @@ namespace SysCredito.model.dao
                 }
             }
 
-            return registros;
+            return usuarioSistema;
 
         }
 
