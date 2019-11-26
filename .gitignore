@@ -329,3 +329,6 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 .vs/SysCredito/v16/.suo
+
+.vs/Syscredito/v16/Server/sqlite3/storage.ide 
+.vs/Syscredito/v16/Server/sqlite3/storage.ide-wal
