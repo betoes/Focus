@@ -20,13 +20,15 @@
         <TextBox HorizontalAlignment="Left" Height="34" Margin="362,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
         <Label Content="Seleccione las condiciones:" FontSize="20" 
             HorizontalAlignment="Left" Margin="156,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.561,2.603"/>
-        <CheckBox Content="condition 1" FontSize="20" HorizontalAlignment="Left" Margin="156,197,0,0" VerticalAlignment="Top" Height="22" Width="186"/>
-        <CheckBox Content="condition 2" FontSize="20" HorizontalAlignment="Left" Margin="156,223,0,0" VerticalAlignment="Top" Height="22" Width="186"/>
-        <CheckBox Content="condition 3" FontSize="20" HorizontalAlignment="Left" Margin="156,245,0,0" VerticalAlignment="Top" Height="22" Width="186"/>
-        <CheckBox Content="condition 4" FontSize="20" HorizontalAlignment="Left" Margin="156,267,0,0" VerticalAlignment="Top" Height="22" Width="186"/>
-
-        <Button Content="Button" HorizontalAlignment="Left" Margin="674,389,0,0" VerticalAlignment="Top" 
-                Background="#303F9F" Width="87" Height="27"/>
+       
+        <Button Content="Continuar" HorizontalAlignment="Left" Margin="674,389,0,0" VerticalAlignment="Top" 
+                Background="#303F9F" Width="auto" Height="auto"/>
+        <Label Content="Numero de pagos:" HorizontalAlignment="Left" Margin="131,190,0,0" FontSize="20" VerticalAlignment="Top" />
+        <Label Content="Tasa de interes:" HorizontalAlignment="Left" Margin="161,234,0,0" FontSize="20" VerticalAlignment="Top" />
+        <Label Content="IVA:" HorizontalAlignment="Left" Margin="261,289,0,0" FontSize="20" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="362,185,0,0" VerticalAlignment="Top" Width="314" Height="38" Name="cb_pagos"/>
+        <ComboBox HorizontalAlignment="Left" Margin="362,230,0,0" VerticalAlignment="Top" Width="314" Height="38" Name="cb_interes"/>
+        <ComboBox HorizontalAlignment="Left" Margin="362,274,0,0" VerticalAlignment="Top" Width="314" Height="38" Name="cb_iva"/>
 
     </Grid>
 </UserControl>

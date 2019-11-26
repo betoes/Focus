@@ -31,9 +31,10 @@
 
 
             </Grid.ColumnDefinitions>
-
+            
             <Grid Grid.Column="0">
             </Grid>
+            <StackPanel x:Name="ucs" />
         </Grid>
 
 

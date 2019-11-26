@@ -19,20 +19,22 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
-        
+
         <Label Content="Busqueda de clientes por RFC" HorizontalAlignment="Left" Margin="41,24,0,0" 
                VerticalAlignment="Top" Height="26" Width="194"/>
-        
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="41,74,0,0" TextWrapping="Wrap" 
+
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="41,74,0,0" TextWrapping="Wrap"  Name="tb_RFC"
                  Text="RFC del cliente" VerticalAlignment="Top" Width="167"/>
-        
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="41,136,0,0" VerticalAlignment="Top" 
+
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="41,136,0,0" VerticalAlignment="Top"  Name="bt_Buscar" 
                Background="#303F9F" Width="74" RenderTransformOrigin="-0.34,0.547"/>
-        
-        <Button Content="Agregar solicitud"  HorizontalAlignment="Left" Margin="41,403,0,13" 
-                Background="#303F9F" VerticalAlignment="Stretch" Width="auto" Height="auto"/>
-        
-        <DataGrid Grid.Column="1" HorizontalAlignment="Center" Height="33" Margin="269,198,258,188" 
-                  VerticalAlignment="Center" Width="32"/>
+
+        <Button Content="Agregar solicitud"  HorizontalAlignment="Left" Margin="41,403,0,13" Name="bt_solicitud"
+                Background="#303F9F" VerticalAlignment="Stretch" Width="auto" Height="auto" IsEnabled="False"/>
+
+        <DataGrid Grid.Column="1" Name="clientes_view" HorizontalAlignment="Center" Height="auto" 
+                  VerticalAlignment="Center" Width="auto" SelectionChanged="Clientes_SelectionChanged">
+            
+        </DataGrid>
     </Grid>
 </UserControl>
