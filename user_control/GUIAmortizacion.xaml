@@ -15,6 +15,16 @@
              FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <DataGrid x:Name="datos" Width="auto" Height="auto" HorizontalAlignment="Stretch">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Fecha de pago"/>
+                <DataGridTextColumn Header="Monto"/>
+                <DataGridTextColumn Header="iva"/>
+                <DataGridTextColumn Header="Total a pagar"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Content="Continuar" Background="DarkSlateBlue" HorizontalAlignment="Left" Margin="641,408,0,0" VerticalAlignment="Top" Width="auto"/>
     </Grid>
 </UserControl>

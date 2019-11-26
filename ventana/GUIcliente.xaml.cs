@@ -21,18 +21,43 @@ namespace SysCredito.ventana
     /// </summary>
     public partial class GUIcliente : Window
     {
+        private int page = 1;
+
         public GUIcliente()
         {
 
             InitializeComponent();
-            GUIDatosPersonales datosPersonales = new GUIDatosPersonales();
-            this.Hide();
-            SPpage.Children.Add(datosPersonales);
-            tbDatosPersonales.Background = Brushes.White;
-            tbDatosPersonales.Foreground = Brushes.Black;
-
-
+            setPage(page);
         }
 
+        public void setPage(int page)
+        {
+            switch (page)
+            {
+
+                case 1:
+
+                    GUIDatosPersonales datosPersonales = new GUIDatosPersonales();
+                    SPpage.Children.Clear();
+                    SPpage.Children.Add(datosPersonales);
+                    tbDatosPersonales.Background = Brushes.White;
+                    tbDatosPersonales.Foreground = Brushes.Black;
+                  break;
+
+                case 2:
+                    GUIDatosTrabajo datosTrabajo = new GUIDatosTrabajo();
+                    SPpage.Children.Clear();
+                    SPpage.Children.Add(datosTrabajo);
+                    tbDatosTrabajo.Background = Brushes.White;
+                    tbDatosTrabajo.Foreground = Brushes.Black;
+                    break;
+            }
+        }
+
+        private void Siguiente_Click(object sender, RoutedEventArgs e)
+        {
+            page++;
+            setPage(page);
+        }
     }
 }
