@@ -20,11 +20,11 @@
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
 
-        <Label Content="Busqueda de clientes por RFC" HorizontalAlignment="Left" Margin="41,24,0,0"  Name="tb_RFC"
+        <Label Content="Busqueda de clientes por RFC" HorizontalAlignment="Left" Margin="41,24,0,0"  
                VerticalAlignment="Top" Height="26" Width="194"/>
         
         <TextBox HorizontalAlignment="Left" Height="40" Margin="41,74,0,0" TextWrapping="Wrap" 
-                 Text="RFC del cliente" VerticalAlignment="Top" Width="167"/>
+                 Text="RFC del cliente" VerticalAlignment="Top" Width="167" x:Name="tb_RFC"/>
 
         <Button Content="Buscar" HorizontalAlignment="Left" Margin="41,136,0,0" VerticalAlignment="Top"  Name="bt_Buscar" 
                Background="#303F9F" Width="74" RenderTransformOrigin="-0.34,0.547"/>

@@ -41,7 +41,6 @@ namespace SysCredito.ventana
                     SPpage.Children.Clear();
                     SPpage.Children.Add(datosPersonales);
                     tbDatosPersonales.Background = Brushes.White;
-                    tbDatosPersonales.Foreground = Brushes.Black;
                   break;
 
                 case 2:
@@ -49,7 +48,6 @@ namespace SysCredito.ventana
                     SPpage.Children.Clear();
                     SPpage.Children.Add(datosTrabajo);
                     tbDatosTrabajo.Background = Brushes.White;
-                    tbDatosTrabajo.Foreground = Brushes.Black;
                     break;
             }
         }
@@ -59,5 +57,6 @@ namespace SysCredito.ventana
             page++;
             setPage(page);
         }
+
     }
 }

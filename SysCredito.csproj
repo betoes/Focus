@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
       <HintPath>packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
     </Reference>
@@ -51,8 +57,11 @@
       <HintPath>packages\ShowMeTheXAML.AvalonEdit.1.0.12\lib\net45\ShowMeTheXAML.AvalonEdit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,12 +81,102 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="catalogobanco.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="catalogodocumentos.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="catalogostatus.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="centrotrabajo.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cliente.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="condiciones.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="focusmodel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>focusmodel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="focusmodel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\dao\ClienteDAO.cs" />
+    <Compile Include="credito.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cuentacliente.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="direccioncliente.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="documentosolicitud.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
     <Compile Include="domain\Asesor.cs" />
     <Compile Include="domain\Cliente.cs" />
     <Compile Include="domain\DatosPersonales.cs" />
     <Compile Include="domain\SolicitudDeCredito.cs" />
     <Compile Include="domain\UsuarioSistema.cs" />
+    <Compile Include="estado.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="focusmodel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>focusmodel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="model\dao\UsuarioSistemaDAO.cs" />
+    <Compile Include="model\dao\DatosTrabajoDAO.cs" />
+    <Compile Include="municipio.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pagoamortizacion.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="plazomesescatalogo.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="politica.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="referenciacliente.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rol.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="solicitudcredito.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="solicitudcreditohaspolitica.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="solicitudhaspolitica.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
+    </Compile>
     <Compile Include="user_control\GUIAmortizacion.xaml.cs">
       <DependentUpon>GUIAmortizacion.xaml</DependentUpon>
     </Compile>
@@ -101,6 +200,9 @@
     </Compile>
     <Compile Include="user_control\prueba.xaml.cs">
       <DependentUpon>prueba.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="usuariosistema.cs">
+      <DependentUpon>focusmodel.tt</DependentUpon>
     </Compile>
     <Compile Include="ventana\GUIAsesorprincipal.xaml.cs">
       <DependentUpon>GUIAsesorprincipal.xaml</DependentUpon>
@@ -180,6 +282,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="focusmodel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>focusmodel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="focusmodel.edmx.diagram">
+      <DependentUpon>focusmodel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -189,6 +298,30 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="focusmodel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>focusmodel.Context.cs</LastGenOutput>
+      <DependentUpon>focusmodel.edmx</DependentUpon>
+    </Content>
+    <Content Include="focusmodel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>focusmodel.cs</LastGenOutput>
+      <DependentUpon>focusmodel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>focusmodel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>focusmodel.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
