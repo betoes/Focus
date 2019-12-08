@@ -1,0 +1,1564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="focusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="catalogobanco">
+          <Key>
+            <PropertyRef Name="idbanco" />
+          </Key>
+          <Property Name="idbanco" Type="int" Nullable="false" />
+          <Property Name="nombrebanco" Type="nvarchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="catalogodocumentos">
+          <Key>
+            <PropertyRef Name="iddocumento" />
+          </Key>
+          <Property Name="iddocumento" Type="int" Nullable="false" />
+          <Property Name="tipodocumento" Type="nvarchar" MaxLength="45" />
+          <Property Name="archivobinario" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="catalogostatus">
+          <Key>
+            <PropertyRef Name="idcatalogostatus" />
+          </Key>
+          <Property Name="idcatalogostatus" Type="int" Nullable="false" />
+          <Property Name="tipostatus" Type="nvarchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="centrotrabajo">
+          <Key>
+            <PropertyRef Name="idcentrotrabajo" />
+          </Key>
+          <Property Name="idcentrotrabajo" Type="int" Nullable="false" />
+          <Property Name="nombreempresa" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="numempleado" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="direccion" Type="nvarchar" MaxLength="90" Nullable="false" />
+          <Property Name="antiguedad" Type="int" Nullable="false" />
+          <Property Name="ocupacion" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="desempeño" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="quincenauno" Type="date" Nullable="false" />
+          <Property Name="quincenados" Type="date" Nullable="false" />
+          <Property Name="municipio_idmunicipio" Type="int" Nullable="false" />
+          <Property Name="cliente_idcliente" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="idcliente" />
+          </Key>
+          <Property Name="idcliente" Type="int" Nullable="false" />
+          <Property Name="rfc" Type="nvarchar" MaxLength="13" Nullable="false" />
+          <Property Name="nombres" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellidos" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="curp" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="clientecol" Type="nvarchar" MaxLength="45" />
+          <Property Name="fechanac" Type="date" />
+          <Property Name="fecharegistro" Type="date" />
+          <Property Name="firmaelectronica" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="condiciones">
+          <Key>
+            <PropertyRef Name="idcondiciones" />
+          </Key>
+          <Property Name="idcondiciones" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="plazo" Type="int" Nullable="false" />
+          <Property Name="tasadeinteres" Type="float" Nullable="false" />
+          <Property Name="iva" Type="float" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="cat" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="credito">
+          <Key>
+            <PropertyRef Name="idcredito" />
+          </Key>
+          <Property Name="idcredito" Type="int" Nullable="false" />
+          <Property Name="saldorestante" Type="nvarchar" MaxLength="45" />
+          <Property Name="usuariosistema_idusuariosistema" Type="int" Nullable="false" />
+          <Property Name="solicitudcredito_idsolicitudcredito" Type="int" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cuentacliente">
+          <Key>
+            <PropertyRef Name="idcuentacliente" />
+          </Key>
+          <Property Name="idcuentacliente" Type="int" Nullable="false" />
+          <Property Name="numerotarjetadebito" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="claveinterbancaria" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="cliente_idcliente" Type="int" Nullable="false" />
+          <Property Name="banco_idbanco" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="direccioncliente">
+          <Key>
+            <PropertyRef Name="iddireccioncliente" />
+          </Key>
+          <Property Name="iddireccioncliente" Type="int" Nullable="false" />
+          <Property Name="calle" Type="nvarchar" MaxLength="35" Nullable="false" />
+          <Property Name="colonia" Type="nvarchar" MaxLength="35" Nullable="false" />
+          <Property Name="numexterior" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="numinterior" Type="nvarchar" MaxLength="4" />
+          <Property Name="cliente_idcliente" Type="int" Nullable="false" />
+          <Property Name="municipio_idmunicipio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="documentosolicitud">
+          <Key>
+            <PropertyRef Name="iddocumentosolicitud" />
+          </Key>
+          <Property Name="iddocumentosolicitud" Type="int" Nullable="false" />
+          <Property Name="fecharegistro" Type="date" Nullable="false" />
+          <Property Name="archivobinario" Type="varbinary(max)" Nullable="false" />
+          <Property Name="solicitudcredito_idsolicitudcredito" Type="int" Nullable="false" />
+          <Property Name="extension" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="nombrearchivo" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="catalogodocumentos_numdocumento" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="idestado" />
+          </Key>
+          <Property Name="idestado" Type="int" Nullable="false" />
+          <Property Name="nombreestado" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <EntityType Name="municipio">
+          <Key>
+            <PropertyRef Name="idmunicipio" />
+          </Key>
+          <Property Name="idmunicipio" Type="int" Nullable="false" />
+          <Property Name="nombremunicipio" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="estado_idestado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pagoamortizacion">
+          <Key>
+            <PropertyRef Name="idpagoamortizacion" />
+          </Key>
+          <Property Name="idpagoamortizacion" Type="int" Nullable="false" />
+          <Property Name="periodo" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="iva" Type="int" Nullable="false" />
+          <Property Name="pagoiva" Type="float" Nullable="false" />
+          <Property Name="pago" Type="float" Nullable="false" />
+          <Property Name="interes" Type="float" Nullable="false" />
+          <Property Name="capital" Type="float" Nullable="false" />
+          <Property Name="solicitudcredito_idsolicitudcredito" Type="int" Nullable="false" />
+          <Property Name="pagototal" Type="float" Nullable="false" />
+          <Property Name="pagado" Type="binary" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="politica">
+          <Key>
+            <PropertyRef Name="idpolitica" />
+          </Key>
+          <Property Name="idpolitica" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="vigencia" Type="date" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="referenciacliente">
+          <Key>
+            <PropertyRef Name="idreferenciacliente" />
+          </Key>
+          <Property Name="idreferenciacliente" Type="int" Nullable="false" />
+          <Property Name="nombres" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellidos" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="relacion" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="direccion" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="rfccliente" Type="nvarchar" MaxLength="13" Nullable="false" />
+          <Property Name="horariodisponible" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="cliente_idcliente" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rol">
+          <Key>
+            <PropertyRef Name="idrol" />
+          </Key>
+          <Property Name="idrol" Type="int" Nullable="false" />
+          <Property Name="nombrerol" Type="nvarchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="solicitudcredito">
+          <Key>
+            <PropertyRef Name="idsolicitudcredito" />
+          </Key>
+          <Property Name="idsolicitudcredito" Type="int" Nullable="false" />
+          <Property Name="cliente_idcliente" Type="int" Nullable="false" />
+          <Property Name="montoparcialidad" Type="float" Nullable="false" />
+          <Property Name="fechasolicitud" Type="date" Nullable="false" />
+          <Property Name="analista_idusuariosistema" Type="int" Nullable="false" />
+          <Property Name="asesor_idusuariosistema" Type="int" Nullable="false" />
+          <Property Name="saldorestante" Type="float" Nullable="false" />
+          <Property Name="monto" Type="float" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="FK_condiciones" Type="nchar" MaxLength="10" />
+          <Property Name="periodocidad" Type="nvarchar" MaxLength="20" />
+          <Property Name="diaspago" Type="nvarchar" MaxLength="50" />
+          <Property Name="numamortizaciones" Type="int" />
+          <Property Name="montototal" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="solicitudhaspolitica">
+          <Key>
+            <PropertyRef Name="FK_solicitud" />
+            <PropertyRef Name="FK_politica" />
+          </Key>
+          <Property Name="FK_solicitud" Type="int" Nullable="false" />
+          <Property Name="FK_politica" Type="int" Nullable="false" />
+          <Property Name="cumplida" Type="int" />
+          <Property Name="obligatoria" Type="int" />
+        </EntityType>
+        <EntityType Name="usuariosistema">
+          <Key>
+            <PropertyRef Name="idusuariosistema" />
+          </Key>
+          <Property Name="idusuariosistema" Type="int" Nullable="false" />
+          <Property Name="numempleado" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="claveacceso" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="fecharegistro" Type="date" Nullable="false" />
+          <Property Name="rol_idrol" Type="int" Nullable="false" />
+          <Property Name="apellidopaterno" Type="nvarchar" MaxLength="40" />
+          <Property Name="apellidomaterno" Type="nvarchar" MaxLength="40" />
+        </EntityType>
+        <Association Name="FK__solicitud__FK_co__078C1F06">
+          <End Role="condiciones" Type="Self.condiciones" Multiplicity="0..1" />
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="condiciones">
+              <PropertyRef Name="idcondiciones" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="FK_condiciones" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_analista_3">
+          <End Role="usuariosistema" Type="Self.usuariosistema" Multiplicity="1" />
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuariosistema">
+              <PropertyRef Name="idusuariosistema" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="analista_idusuariosistema" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asesor_4">
+          <End Role="usuariosistema" Type="Self.usuariosistema" Multiplicity="1" />
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuariosistema">
+              <PropertyRef Name="idusuariosistema" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="asesor_idusuariosistema" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_banco_1">
+          <End Role="catalogobanco" Type="Self.catalogobanco" Multiplicity="1" />
+          <End Role="cuentacliente" Type="Self.cuentacliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="catalogobanco">
+              <PropertyRef Name="idbanco" />
+            </Principal>
+            <Dependent Role="cuentacliente">
+              <PropertyRef Name="banco_idbanco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_catalogosdocumentos_2">
+          <End Role="catalogodocumentos" Type="Self.catalogodocumentos" Multiplicity="1" />
+          <End Role="documentosolicitud" Type="Self.documentosolicitud" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="catalogodocumentos">
+              <PropertyRef Name="iddocumento" />
+            </Principal>
+            <Dependent Role="documentosolicitud">
+              <PropertyRef Name="catalogodocumentos_numdocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cliente_2">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="cuentacliente" Type="Self.cuentacliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="cuentacliente">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cliente_cliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="centrotrabajo" Type="Self.centrotrabajo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="centrotrabajo">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cliente_idcliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="direccioncliente" Type="Self.direccioncliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="direccioncliente">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_estado_idestado">
+          <End Role="estado" Type="Self.estado" Multiplicity="1" />
+          <End Role="municipio" Type="Self.municipio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="idestado" />
+            </Principal>
+            <Dependent Role="municipio">
+              <PropertyRef Name="estado_idestado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_idcliente_2">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_municipio_idmunicipio">
+          <End Role="municipio" Type="Self.municipio" Multiplicity="1" />
+          <End Role="direccioncliente" Type="Self.direccioncliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="municipio">
+              <PropertyRef Name="idmunicipio" />
+            </Principal>
+            <Dependent Role="direccioncliente">
+              <PropertyRef Name="municipio_idmunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_municipio_municipio">
+          <End Role="municipio" Type="Self.municipio" Multiplicity="1" />
+          <End Role="centrotrabajo" Type="Self.centrotrabajo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="municipio">
+              <PropertyRef Name="idmunicipio" />
+            </Principal>
+            <Dependent Role="centrotrabajo">
+              <PropertyRef Name="municipio_idmunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_refcliente_idcliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="referenciacliente" Type="Self.referenciacliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="referenciacliente">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_solicitudcredito_1">
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="1" />
+          <End Role="documentosolicitud" Type="Self.documentosolicitud" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="documentosolicitud">
+              <PropertyRef Name="solicitudcredito_idsolicitudcredito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_solicitudcredito_solicitudcredito">
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="1" />
+          <End Role="credito" Type="Self.credito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="credito">
+              <PropertyRef Name="solicitudcredito_idsolicitudcredito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_solictudcredito_4">
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="1" />
+          <End Role="pagoamortizacion" Type="Self.pagoamortizacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="pagoamortizacion">
+              <PropertyRef Name="solicitudcredito_idsolicitudcredito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ssrol_rol">
+          <End Role="rol" Type="Self.rol" Multiplicity="1" />
+          <End Role="usuariosistema" Type="Self.usuariosistema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rol">
+              <PropertyRef Name="idrol" />
+            </Principal>
+            <Dependent Role="usuariosistema">
+              <PropertyRef Name="rol_idrol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_status_1">
+          <End Role="catalogostatus" Type="Self.catalogostatus" Multiplicity="1" />
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="catalogostatus">
+              <PropertyRef Name="idcatalogostatus" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_status_2">
+          <End Role="catalogostatus" Type="Self.catalogostatus" Multiplicity="1" />
+          <End Role="credito" Type="Self.credito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="catalogostatus">
+              <PropertyRef Name="idcatalogostatus" />
+            </Principal>
+            <Dependent Role="credito">
+              <PropertyRef Name="status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_1_politica">
+          <End Role="politica" Type="Self.politica" Multiplicity="1" />
+          <End Role="solicitudhaspolitica" Type="Self.solicitudhaspolitica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="politica">
+              <PropertyRef Name="idpolitica" />
+            </Principal>
+            <Dependent Role="solicitudhaspolitica">
+              <PropertyRef Name="FK_politica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_1_solicitudcredito">
+          <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="1" />
+          <End Role="solicitudhaspolitica" Type="Self.solicitudhaspolitica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="solicitudhaspolitica">
+              <PropertyRef Name="FK_solicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuariosistema_idusuariosistema">
+          <End Role="usuariosistema" Type="Self.usuariosistema" Multiplicity="1" />
+          <End Role="credito" Type="Self.credito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuariosistema">
+              <PropertyRef Name="idusuariosistema" />
+            </Principal>
+            <Dependent Role="credito">
+              <PropertyRef Name="usuariosistema_idusuariosistema" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="focusModelStoreContainer">
+          <EntitySet Name="catalogobanco" EntityType="Self.catalogobanco" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="catalogodocumentos" EntityType="Self.catalogodocumentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="catalogostatus" EntityType="Self.catalogostatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="centrotrabajo" EntityType="Self.centrotrabajo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="condiciones" EntityType="Self.condiciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="credito" EntityType="Self.credito" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cuentacliente" EntityType="Self.cuentacliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="direccioncliente" EntityType="Self.direccioncliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="documentosolicitud" EntityType="Self.documentosolicitud" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estado" EntityType="Self.estado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="municipio" EntityType="Self.municipio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pagoamortizacion" EntityType="Self.pagoamortizacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="politica" EntityType="Self.politica" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="referenciacliente" EntityType="Self.referenciacliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="rol" EntityType="Self.rol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="solicitudcredito" EntityType="Self.solicitudcredito" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="solicitudhaspolitica" EntityType="Self.solicitudhaspolitica" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuariosistema" EntityType="Self.usuariosistema" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__solicitud__FK_co__078C1F06" Association="Self.FK__solicitud__FK_co__078C1F06">
+            <End Role="condiciones" EntitySet="condiciones" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_analista_3" Association="Self.FK_analista_3">
+            <End Role="usuariosistema" EntitySet="usuariosistema" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asesor_4" Association="Self.FK_asesor_4">
+            <End Role="usuariosistema" EntitySet="usuariosistema" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_banco_1" Association="Self.FK_banco_1">
+            <End Role="catalogobanco" EntitySet="catalogobanco" />
+            <End Role="cuentacliente" EntitySet="cuentacliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_catalogosdocumentos_2" Association="Self.FK_catalogosdocumentos_2">
+            <End Role="catalogodocumentos" EntitySet="catalogodocumentos" />
+            <End Role="documentosolicitud" EntitySet="documentosolicitud" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cliente_2" Association="Self.FK_cliente_2">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="cuentacliente" EntitySet="cuentacliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cliente_cliente" Association="Self.FK_cliente_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="centrotrabajo" EntitySet="centrotrabajo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cliente_idcliente" Association="Self.FK_cliente_idcliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="direccioncliente" EntitySet="direccioncliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_estado_idestado" Association="Self.FK_estado_idestado">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="municipio" EntitySet="municipio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_idcliente_2" Association="Self.FK_idcliente_2">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_municipio_idmunicipio" Association="Self.FK_municipio_idmunicipio">
+            <End Role="municipio" EntitySet="municipio" />
+            <End Role="direccioncliente" EntitySet="direccioncliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_municipio_municipio" Association="Self.FK_municipio_municipio">
+            <End Role="municipio" EntitySet="municipio" />
+            <End Role="centrotrabajo" EntitySet="centrotrabajo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_refcliente_idcliente" Association="Self.FK_refcliente_idcliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="referenciacliente" EntitySet="referenciacliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_solicitudcredito_1" Association="Self.FK_solicitudcredito_1">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="documentosolicitud" EntitySet="documentosolicitud" />
+          </AssociationSet>
+          <AssociationSet Name="FK_solicitudcredito_solicitudcredito" Association="Self.FK_solicitudcredito_solicitudcredito">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="credito" EntitySet="credito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_solictudcredito_4" Association="Self.FK_solictudcredito_4">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="pagoamortizacion" EntitySet="pagoamortizacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ssrol_rol" Association="Self.FK_ssrol_rol">
+            <End Role="rol" EntitySet="rol" />
+            <End Role="usuariosistema" EntitySet="usuariosistema" />
+          </AssociationSet>
+          <AssociationSet Name="FK_status_1" Association="Self.FK_status_1">
+            <End Role="catalogostatus" EntitySet="catalogostatus" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_status_2" Association="Self.FK_status_2">
+            <End Role="catalogostatus" EntitySet="catalogostatus" />
+            <End Role="credito" EntitySet="credito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_1_politica" Association="Self.FK_Table_1_politica">
+            <End Role="politica" EntitySet="politica" />
+            <End Role="solicitudhaspolitica" EntitySet="solicitudhaspolitica" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_1_solicitudcredito" Association="Self.FK_Table_1_solicitudcredito">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="solicitudhaspolitica" EntitySet="solicitudhaspolitica" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuariosistema_idusuariosistema" Association="Self.FK_usuariosistema_idusuariosistema">
+            <End Role="usuariosistema" EntitySet="usuariosistema" />
+            <End Role="credito" EntitySet="credito" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="focusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="usuariosistema">
+          <Key>
+            <PropertyRef Name="idusuariosistema" />
+          </Key>
+          <Property Name="idusuariosistema" Type="Int32" Nullable="false" />
+          <Property Name="numempleado" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="claveacceso" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fecharegistro" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="rol_idrol" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="credito" Relationship="focusModel.FK_usuariosistema_idusuariosistema" FromRole="usuariosistema" ToRole="credito" />
+          <NavigationProperty Name="rol" Relationship="focusModel.FK_ssrol_rol" FromRole="usuariosistema" ToRole="rol" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_analista_3" FromRole="usuariosistema" ToRole="solicitudcredito" />
+          <NavigationProperty Name="solicitudcredito1" Relationship="focusModel.FK_asesor_4" FromRole="usuariosistema" ToRole="solicitudcredito" />
+          <Property Name="apellidopaterno" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="apellidomaterno" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="focusEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="usuariosistema" EntityType="Self.usuariosistema" />
+          <EntitySet Name="catalogobanco" EntityType="focusModel.catalogobanco" />
+          <EntitySet Name="catalogodocumentos" EntityType="focusModel.catalogodocumentos" />
+          <EntitySet Name="catalogostatus" EntityType="focusModel.catalogostatus" />
+          <EntitySet Name="centrotrabajo" EntityType="focusModel.centrotrabajo" />
+          <EntitySet Name="cliente" EntityType="focusModel.cliente" />
+          <EntitySet Name="credito" EntityType="focusModel.credito" />
+          <EntitySet Name="cuentacliente" EntityType="focusModel.cuentacliente" />
+          <EntitySet Name="direccioncliente" EntityType="focusModel.direccioncliente" />
+          <EntitySet Name="documentosolicitud" EntityType="focusModel.documentosolicitud" />
+          <EntitySet Name="estado" EntityType="focusModel.estado" />
+          <EntitySet Name="municipio" EntityType="focusModel.municipio" />
+          <EntitySet Name="pagoamortizacion" EntityType="focusModel.pagoamortizacion" />
+          <EntitySet Name="plazomesescatalogo" EntityType="focusModel.plazomesescatalogo" />
+          <EntitySet Name="politica" EntityType="focusModel.politica" />
+          <EntitySet Name="referenciacliente" EntityType="focusModel.referenciacliente" />
+          <EntitySet Name="rol" EntityType="focusModel.rol" />
+          <EntitySet Name="solicitudcredito" EntityType="focusModel.solicitudcredito" />
+          <EntitySet Name="solicitudcreditohaspolitica" EntityType="focusModel.solicitudcreditohaspolitica" />
+          <EntitySet Name="sysdiagrams" EntityType="focusModel.sysdiagrams" />
+          <AssociationSet Name="FK_banco_1" Association="focusModel.FK_banco_1">
+            <End Role="catalogobanco" EntitySet="catalogobanco" />
+            <End Role="cuentacliente" EntitySet="cuentacliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_catalogosdocumentos_2" Association="focusModel.FK_catalogosdocumentos_2">
+            <End Role="catalogodocumentos" EntitySet="catalogodocumentos" />
+            <End Role="documentosolicitud" EntitySet="documentosolicitud" />
+          </AssociationSet>
+          <AssociationSet Name="FK_status_1" Association="focusModel.FK_status_1">
+            <End Role="catalogostatus" EntitySet="catalogostatus" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_status_2" Association="focusModel.FK_status_2">
+            <End Role="catalogostatus" EntitySet="catalogostatus" />
+            <End Role="credito" EntitySet="credito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cliente_cliente" Association="focusModel.FK_cliente_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="centrotrabajo" EntitySet="centrotrabajo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_municipio_municipio" Association="focusModel.FK_municipio_municipio">
+            <End Role="municipio" EntitySet="municipio" />
+            <End Role="centrotrabajo" EntitySet="centrotrabajo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cliente_2" Association="focusModel.FK_cliente_2">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="cuentacliente" EntitySet="cuentacliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cliente_idcliente" Association="focusModel.FK_cliente_idcliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="direccioncliente" EntitySet="direccioncliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_idcliente_2" Association="focusModel.FK_idcliente_2">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_refcliente_idcliente" Association="focusModel.FK_refcliente_idcliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="referenciacliente" EntitySet="referenciacliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_solicitudcredito_solicitudcredito" Association="focusModel.FK_solicitudcredito_solicitudcredito">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="credito" EntitySet="credito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuariosistema_idusuariosistema" Association="focusModel.FK_usuariosistema_idusuariosistema">
+            <End Role="usuariosistema" EntitySet="usuariosistema" />
+            <End Role="credito" EntitySet="credito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_municipio_idmunicipio" Association="focusModel.FK_municipio_idmunicipio">
+            <End Role="municipio" EntitySet="municipio" />
+            <End Role="direccioncliente" EntitySet="direccioncliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_solicitudcredito_1" Association="focusModel.FK_solicitudcredito_1">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="documentosolicitud" EntitySet="documentosolicitud" />
+          </AssociationSet>
+          <AssociationSet Name="FK_estado_idestado" Association="focusModel.FK_estado_idestado">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="municipio" EntitySet="municipio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_solictudcredito_4" Association="focusModel.FK_solictudcredito_4">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="pagoamortizacion" EntitySet="pagoamortizacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_plazomescatalogo_5" Association="focusModel.FK_plazomescatalogo_5">
+            <End Role="plazomesescatalogo" EntitySet="plazomesescatalogo" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_politica_idpolitica" Association="focusModel.FK_politica_idpolitica">
+            <End Role="politica" EntitySet="politica" />
+            <End Role="solicitudcreditohaspolitica" EntitySet="solicitudcreditohaspolitica" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ssrol_rol" Association="focusModel.FK_ssrol_rol">
+            <End Role="rol" EntitySet="rol" />
+            <End Role="usuariosistema" EntitySet="usuariosistema" />
+          </AssociationSet>
+          <AssociationSet Name="FK_analista_3" Association="focusModel.FK_analista_3">
+            <End Role="usuariosistema" EntitySet="usuariosistema" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asesor_4" Association="focusModel.FK_asesor_4">
+            <End Role="usuariosistema" EntitySet="usuariosistema" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_solicitudcredito_3" Association="focusModel.FK_solicitudcredito_3">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="solicitudcreditohaspolitica" EntitySet="solicitudcreditohaspolitica" />
+          </AssociationSet>
+          <EntitySet Name="condiciones" EntityType="focusModel.condiciones" />
+          <EntitySet Name="solicitudhaspolitica" EntityType="focusModel.solicitudhaspolitica" />
+          <AssociationSet Name="FK__solicitud__FK_co__078C1F06" Association="focusModel.FK__solicitud__FK_co__078C1F06">
+            <End Role="condiciones" EntitySet="condiciones" />
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_1_politica" Association="focusModel.FK_Table_1_politica">
+            <End Role="politica" EntitySet="politica" />
+            <End Role="solicitudhaspolitica" EntitySet="solicitudhaspolitica" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_1_solicitudcredito" Association="focusModel.FK_Table_1_solicitudcredito">
+            <End Role="solicitudcredito" EntitySet="solicitudcredito" />
+            <End Role="solicitudhaspolitica" EntitySet="solicitudhaspolitica" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="catalogobanco">
+          <Key>
+            <PropertyRef Name="idbanco" />
+          </Key>
+          <Property Name="idbanco" Type="Int32" Nullable="false" />
+          <Property Name="nombrebanco" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="cuentacliente" Relationship="focusModel.FK_banco_1" FromRole="catalogobanco" ToRole="cuentacliente" />
+        </EntityType>
+        <EntityType Name="catalogodocumentos">
+          <Key>
+            <PropertyRef Name="iddocumento" />
+          </Key>
+          <Property Name="iddocumento" Type="Int32" Nullable="false" />
+          <Property Name="tipodocumento" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="archivobinario" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="documentosolicitud" Relationship="focusModel.FK_catalogosdocumentos_2" FromRole="catalogodocumentos" ToRole="documentosolicitud" />
+        </EntityType>
+        <EntityType Name="catalogostatus">
+          <Key>
+            <PropertyRef Name="idcatalogostatus" />
+          </Key>
+          <Property Name="idcatalogostatus" Type="Int32" Nullable="false" />
+          <Property Name="tipostatus" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_status_1" FromRole="catalogostatus" ToRole="solicitudcredito" />
+          <NavigationProperty Name="credito" Relationship="focusModel.FK_status_2" FromRole="catalogostatus" ToRole="credito" />
+        </EntityType>
+        <EntityType Name="centrotrabajo">
+          <Key>
+            <PropertyRef Name="idcentrotrabajo" />
+          </Key>
+          <Property Name="idcentrotrabajo" Type="Int32" Nullable="false" />
+          <Property Name="nombreempresa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="numempleado" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="direccion" Type="String" Nullable="false" MaxLength="90" FixedLength="false" Unicode="true" />
+          <Property Name="antiguedad" Type="Int32" Nullable="false" />
+          <Property Name="ocupacion" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="desempeño" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="quincenauno" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="quincenados" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="municipio_idmunicipio" Type="Int32" Nullable="false" />
+          <Property Name="cliente_idcliente" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cliente" Relationship="focusModel.FK_cliente_cliente" FromRole="centrotrabajo" ToRole="cliente" />
+          <NavigationProperty Name="municipio" Relationship="focusModel.FK_municipio_municipio" FromRole="centrotrabajo" ToRole="municipio" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="idcliente" />
+          </Key>
+          <Property Name="idcliente" Type="Int32" Nullable="false" />
+          <Property Name="rfc" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="nombres" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="apellidos" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="curp" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="clientecol" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="fechanac" Type="DateTime" Precision="0" />
+          <Property Name="fecharegistro" Type="DateTime" Precision="0" />
+          <Property Name="firmaelectronica" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="centrotrabajo" Relationship="focusModel.FK_cliente_cliente" FromRole="cliente" ToRole="centrotrabajo" />
+          <NavigationProperty Name="cuentacliente" Relationship="focusModel.FK_cliente_2" FromRole="cliente" ToRole="cuentacliente" />
+          <NavigationProperty Name="direccioncliente" Relationship="focusModel.FK_cliente_idcliente" FromRole="cliente" ToRole="direccioncliente" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_idcliente_2" FromRole="cliente" ToRole="solicitudcredito" />
+          <NavigationProperty Name="referenciacliente" Relationship="focusModel.FK_refcliente_idcliente" FromRole="cliente" ToRole="referenciacliente" />
+        </EntityType>
+        <EntityType Name="credito">
+          <Key>
+            <PropertyRef Name="idcredito" />
+          </Key>
+          <Property Name="idcredito" Type="Int32" Nullable="false" />
+          <Property Name="saldorestante" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="usuariosistema_idusuariosistema" Type="Int32" Nullable="false" />
+          <Property Name="solicitudcredito_idsolicitudcredito" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="catalogostatus" Relationship="focusModel.FK_status_2" FromRole="credito" ToRole="catalogostatus" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_solicitudcredito_solicitudcredito" FromRole="credito" ToRole="solicitudcredito" />
+          <NavigationProperty Name="usuariosistema" Relationship="focusModel.FK_usuariosistema_idusuariosistema" FromRole="credito" ToRole="usuariosistema" />
+        </EntityType>
+        <EntityType Name="cuentacliente">
+          <Key>
+            <PropertyRef Name="idcuentacliente" />
+          </Key>
+          <Property Name="idcuentacliente" Type="Int32" Nullable="false" />
+          <Property Name="numerotarjetadebito" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="claveinterbancaria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="cliente_idcliente" Type="Int32" Nullable="false" />
+          <Property Name="banco_idbanco" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="catalogobanco" Relationship="focusModel.FK_banco_1" FromRole="cuentacliente" ToRole="catalogobanco" />
+          <NavigationProperty Name="cliente" Relationship="focusModel.FK_cliente_2" FromRole="cuentacliente" ToRole="cliente" />
+        </EntityType>
+        <EntityType Name="direccioncliente">
+          <Key>
+            <PropertyRef Name="iddireccioncliente" />
+          </Key>
+          <Property Name="iddireccioncliente" Type="Int32" Nullable="false" />
+          <Property Name="calle" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="colonia" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="numexterior" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="numinterior" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="cliente_idcliente" Type="Int32" Nullable="false" />
+          <Property Name="municipio_idmunicipio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cliente" Relationship="focusModel.FK_cliente_idcliente" FromRole="direccioncliente" ToRole="cliente" />
+          <NavigationProperty Name="municipio" Relationship="focusModel.FK_municipio_idmunicipio" FromRole="direccioncliente" ToRole="municipio" />
+        </EntityType>
+        <EntityType Name="documentosolicitud">
+          <Key>
+            <PropertyRef Name="iddocumentosolicitud" />
+          </Key>
+          <Property Name="iddocumentosolicitud" Type="Int32" Nullable="false" />
+          <Property Name="fecharegistro" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="archivobinario" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="solicitudcredito_idsolicitudcredito" Type="Int32" Nullable="false" />
+          <Property Name="extension" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="nombrearchivo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="catalogodocumentos_numdocumento" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="catalogodocumentos" Relationship="focusModel.FK_catalogosdocumentos_2" FromRole="documentosolicitud" ToRole="catalogodocumentos" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_solicitudcredito_1" FromRole="documentosolicitud" ToRole="solicitudcredito" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="idestado" />
+          </Key>
+          <Property Name="idestado" Type="Int32" Nullable="false" />
+          <Property Name="nombreestado" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="municipio" Relationship="focusModel.FK_estado_idestado" FromRole="estado" ToRole="municipio" />
+        </EntityType>
+        <EntityType Name="municipio">
+          <Key>
+            <PropertyRef Name="idmunicipio" />
+          </Key>
+          <Property Name="idmunicipio" Type="Int32" Nullable="false" />
+          <Property Name="nombremunicipio" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="estado_idestado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="centrotrabajo" Relationship="focusModel.FK_municipio_municipio" FromRole="municipio" ToRole="centrotrabajo" />
+          <NavigationProperty Name="direccioncliente" Relationship="focusModel.FK_municipio_idmunicipio" FromRole="municipio" ToRole="direccioncliente" />
+          <NavigationProperty Name="estado" Relationship="focusModel.FK_estado_idestado" FromRole="municipio" ToRole="estado" />
+        </EntityType>
+        <EntityType Name="pagoamortizacion">
+          <Key>
+            <PropertyRef Name="idpagoamortizacion" />
+          </Key>
+          <Property Name="idpagoamortizacion" Type="Int32" Nullable="false" />
+          <Property Name="periodo" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="iva" Type="Int32" Nullable="false" />
+          <Property Name="pagoiva" Type="Double" Nullable="false" />
+          <Property Name="pago" Type="Double" Nullable="false" />
+          <Property Name="interes" Type="Double" Nullable="false" />
+          <Property Name="capital" Type="Double" Nullable="false" />
+          <Property Name="saldorestante" Type="Double" Nullable="false" />
+          <Property Name="solicitudcredito_idsolicitudcredito" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_solictudcredito_4" FromRole="pagoamortizacion" ToRole="solicitudcredito" />
+          <Property Name="pagototal" Type="Double" Nullable="false" />
+          <Property Name="pagado" Type="Binary" Nullable="false" MaxLength="1" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="plazomesescatalogo">
+          <Key>
+            <PropertyRef Name="idplazomesescatalogo" />
+          </Key>
+          <Property Name="idplazomesescatalogo" Type="Int32" Nullable="false" />
+          <Property Name="cantidad" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_plazomescatalogo_5" FromRole="plazomesescatalogo" ToRole="solicitudcredito" />
+        </EntityType>
+        <EntityType Name="politica">
+          <Key>
+            <PropertyRef Name="idpolitica" />
+          </Key>
+          <Property Name="idpolitica" Type="Int32" Nullable="false" />
+          <Property Name="numeropolitica" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="solicitudcreditohaspolitica" Relationship="focusModel.FK_politica_idpolitica" FromRole="politica" ToRole="solicitudcreditohaspolitica" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="vigencia" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="solicitudhaspolitica" Relationship="focusModel.FK_Table_1_politica" FromRole="politica" ToRole="solicitudhaspolitica" />
+        </EntityType>
+        <EntityType Name="referenciacliente">
+          <Key>
+            <PropertyRef Name="idreferenciacliente" />
+          </Key>
+          <Property Name="idreferenciacliente" Type="Int32" Nullable="false" />
+          <Property Name="nombres" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="apellidos" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="relacion" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="telefono" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="direccion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="rfccliente" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="horariodisponible" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="cliente_idcliente" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cliente" Relationship="focusModel.FK_refcliente_idcliente" FromRole="referenciacliente" ToRole="cliente" />
+        </EntityType>
+        <EntityType Name="rol">
+          <Key>
+            <PropertyRef Name="idrol" />
+          </Key>
+          <Property Name="idrol" Type="Int32" Nullable="false" />
+          <Property Name="nombrerol" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="usuariosistema" Relationship="focusModel.FK_ssrol_rol" FromRole="rol" ToRole="usuariosistema" />
+        </EntityType>
+        <EntityType Name="solicitudcredito">
+          <Key>
+            <PropertyRef Name="idsolicitudcredito" />
+          </Key>
+          <Property Name="idsolicitudcredito" Type="Int32" Nullable="false" />
+          <Property Name="cliente_idcliente" Type="Int32" Nullable="false" />
+          <Property Name="montoparcialidad" Type="Double" Nullable="false" />
+          <Property Name="fechasolicitud" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="analista_idusuariosistema" Type="Int32" Nullable="false" />
+          <Property Name="asesor_idusuariosistema" Type="Int32" Nullable="false" />
+          <Property Name="saldorestante" Type="Double" Nullable="false" />
+          <Property Name="plazomesescatalogo_idplazomesescatalogo" Type="Int32" Nullable="false" />
+          <Property Name="saldosolicitada" Type="Double" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="catalogostatus" Relationship="focusModel.FK_status_1" FromRole="solicitudcredito" ToRole="catalogostatus" />
+          <NavigationProperty Name="cliente" Relationship="focusModel.FK_idcliente_2" FromRole="solicitudcredito" ToRole="cliente" />
+          <NavigationProperty Name="credito" Relationship="focusModel.FK_solicitudcredito_solicitudcredito" FromRole="solicitudcredito" ToRole="credito" />
+          <NavigationProperty Name="documentosolicitud" Relationship="focusModel.FK_solicitudcredito_1" FromRole="solicitudcredito" ToRole="documentosolicitud" />
+          <NavigationProperty Name="pagoamortizacion" Relationship="focusModel.FK_solictudcredito_4" FromRole="solicitudcredito" ToRole="pagoamortizacion" />
+          <NavigationProperty Name="plazomesescatalogo" Relationship="focusModel.FK_plazomescatalogo_5" FromRole="solicitudcredito" ToRole="plazomesescatalogo" />
+          <NavigationProperty Name="usuariosistema" Relationship="focusModel.FK_analista_3" FromRole="solicitudcredito" ToRole="usuariosistema" />
+          <NavigationProperty Name="usuariosistema1" Relationship="focusModel.FK_asesor_4" FromRole="solicitudcredito" ToRole="usuariosistema" />
+          <NavigationProperty Name="solicitudcreditohaspolitica" Relationship="focusModel.FK_solicitudcredito_3" FromRole="solicitudcredito" ToRole="solicitudcreditohaspolitica" />
+          <Property Name="monto" Type="Double" Nullable="false" />
+          <Property Name="FK_condiciones" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="periodocidad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="diaspago" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="numamortizaciones" Type="Int32" />
+          <Property Name="montototal" Type="Double" Nullable="false" />
+          <NavigationProperty Name="condiciones" Relationship="focusModel.FK__solicitud__FK_co__078C1F06" FromRole="solicitudcredito" ToRole="condiciones" />
+          <NavigationProperty Name="solicitudhaspolitica" Relationship="focusModel.FK_Table_1_solicitudcredito" FromRole="solicitudcredito" ToRole="solicitudhaspolitica" />
+        </EntityType>
+        <EntityType Name="solicitudcreditohaspolitica">
+          <Key>
+            <PropertyRef Name="solicitudcredito_idsolicitudcredito" />
+            <PropertyRef Name="politica_idpolitica" />
+          </Key>
+          <Property Name="solicitudcredito_idsolicitudcredito" Type="Int32" Nullable="false" />
+          <Property Name="politica_idpolitica" Type="Int32" Nullable="false" />
+          <Property Name="cumplida" Type="Byte" />
+          <Property Name="obligatoria" Type="Byte" />
+          <NavigationProperty Name="politica" Relationship="focusModel.FK_politica_idpolitica" FromRole="solicitudcreditohaspolitica" ToRole="politica" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_solicitudcredito_3" FromRole="solicitudcreditohaspolitica" ToRole="solicitudcredito" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_banco_1">
+          <End Type="focusModel.catalogobanco" Role="catalogobanco" Multiplicity="1" />
+          <End Type="focusModel.cuentacliente" Role="cuentacliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="catalogobanco">
+              <PropertyRef Name="idbanco" />
+            </Principal>
+            <Dependent Role="cuentacliente">
+              <PropertyRef Name="banco_idbanco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_catalogosdocumentos_2">
+          <End Type="focusModel.catalogodocumentos" Role="catalogodocumentos" Multiplicity="1" />
+          <End Type="focusModel.documentosolicitud" Role="documentosolicitud" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="catalogodocumentos">
+              <PropertyRef Name="iddocumento" />
+            </Principal>
+            <Dependent Role="documentosolicitud">
+              <PropertyRef Name="catalogodocumentos_numdocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_status_1">
+          <End Type="focusModel.catalogostatus" Role="catalogostatus" Multiplicity="1" />
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="catalogostatus">
+              <PropertyRef Name="idcatalogostatus" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_status_2">
+          <End Type="focusModel.catalogostatus" Role="catalogostatus" Multiplicity="1" />
+          <End Type="focusModel.credito" Role="credito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="catalogostatus">
+              <PropertyRef Name="idcatalogostatus" />
+            </Principal>
+            <Dependent Role="credito">
+              <PropertyRef Name="status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cliente_cliente">
+          <End Type="focusModel.cliente" Role="cliente" Multiplicity="1" />
+          <End Type="focusModel.centrotrabajo" Role="centrotrabajo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="centrotrabajo">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_municipio_municipio">
+          <End Type="focusModel.municipio" Role="municipio" Multiplicity="1" />
+          <End Type="focusModel.centrotrabajo" Role="centrotrabajo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="municipio">
+              <PropertyRef Name="idmunicipio" />
+            </Principal>
+            <Dependent Role="centrotrabajo">
+              <PropertyRef Name="municipio_idmunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cliente_2">
+          <End Type="focusModel.cliente" Role="cliente" Multiplicity="1" />
+          <End Type="focusModel.cuentacliente" Role="cuentacliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="cuentacliente">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cliente_idcliente">
+          <End Type="focusModel.cliente" Role="cliente" Multiplicity="1" />
+          <End Type="focusModel.direccioncliente" Role="direccioncliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="direccioncliente">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_idcliente_2">
+          <End Type="focusModel.cliente" Role="cliente" Multiplicity="1" />
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_refcliente_idcliente">
+          <End Type="focusModel.cliente" Role="cliente" Multiplicity="1" />
+          <End Type="focusModel.referenciacliente" Role="referenciacliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="referenciacliente">
+              <PropertyRef Name="cliente_idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_solicitudcredito_solicitudcredito">
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="1" />
+          <End Type="focusModel.credito" Role="credito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="credito">
+              <PropertyRef Name="solicitudcredito_idsolicitudcredito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuariosistema_idusuariosistema">
+          <End Type="focusModel.usuariosistema" Role="usuariosistema" Multiplicity="1" />
+          <End Type="focusModel.credito" Role="credito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuariosistema">
+              <PropertyRef Name="idusuariosistema" />
+            </Principal>
+            <Dependent Role="credito">
+              <PropertyRef Name="usuariosistema_idusuariosistema" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_municipio_idmunicipio">
+          <End Type="focusModel.municipio" Role="municipio" Multiplicity="1" />
+          <End Type="focusModel.direccioncliente" Role="direccioncliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="municipio">
+              <PropertyRef Name="idmunicipio" />
+            </Principal>
+            <Dependent Role="direccioncliente">
+              <PropertyRef Name="municipio_idmunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_solicitudcredito_1">
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="1" />
+          <End Type="focusModel.documentosolicitud" Role="documentosolicitud" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="documentosolicitud">
+              <PropertyRef Name="solicitudcredito_idsolicitudcredito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_estado_idestado">
+          <End Type="focusModel.estado" Role="estado" Multiplicity="1" />
+          <End Type="focusModel.municipio" Role="municipio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="idestado" />
+            </Principal>
+            <Dependent Role="municipio">
+              <PropertyRef Name="estado_idestado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_solictudcredito_4">
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="1" />
+          <End Type="focusModel.pagoamortizacion" Role="pagoamortizacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="pagoamortizacion">
+              <PropertyRef Name="solicitudcredito_idsolicitudcredito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_plazomescatalogo_5">
+          <End Type="focusModel.plazomesescatalogo" Role="plazomesescatalogo" Multiplicity="1" />
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="plazomesescatalogo">
+              <PropertyRef Name="idplazomesescatalogo" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="plazomesescatalogo_idplazomesescatalogo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_politica_idpolitica">
+          <End Type="focusModel.politica" Role="politica" Multiplicity="1" />
+          <End Type="focusModel.solicitudcreditohaspolitica" Role="solicitudcreditohaspolitica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="politica">
+              <PropertyRef Name="idpolitica" />
+            </Principal>
+            <Dependent Role="solicitudcreditohaspolitica">
+              <PropertyRef Name="politica_idpolitica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ssrol_rol">
+          <End Type="focusModel.rol" Role="rol" Multiplicity="1" />
+          <End Type="focusModel.usuariosistema" Role="usuariosistema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rol">
+              <PropertyRef Name="idrol" />
+            </Principal>
+            <Dependent Role="usuariosistema">
+              <PropertyRef Name="rol_idrol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_analista_3">
+          <End Type="focusModel.usuariosistema" Role="usuariosistema" Multiplicity="1" />
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuariosistema">
+              <PropertyRef Name="idusuariosistema" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="analista_idusuariosistema" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asesor_4">
+          <End Type="focusModel.usuariosistema" Role="usuariosistema" Multiplicity="1" />
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuariosistema">
+              <PropertyRef Name="idusuariosistema" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="asesor_idusuariosistema" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_solicitudcredito_3">
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="1" />
+          <End Type="focusModel.solicitudcreditohaspolitica" Role="solicitudcreditohaspolitica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="solicitudcreditohaspolitica">
+              <PropertyRef Name="solicitudcredito_idsolicitudcredito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="condiciones">
+          <Key>
+            <PropertyRef Name="idcondiciones" />
+          </Key>
+          <Property Name="idcondiciones" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="plazo" Type="Int32" Nullable="false" />
+          <Property Name="tasadeinteres" Type="Double" Nullable="false" />
+          <Property Name="iva" Type="Double" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="cat" Type="Double" Nullable="false" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK__solicitud__FK_co__078C1F06" FromRole="condiciones" ToRole="solicitudcredito" />
+        </EntityType>
+        <EntityType Name="solicitudhaspolitica">
+          <Key>
+            <PropertyRef Name="FK_solicitud" />
+            <PropertyRef Name="FK_politica" />
+          </Key>
+          <Property Name="FK_solicitud" Type="Int32" Nullable="false" />
+          <Property Name="FK_politica" Type="Int32" Nullable="false" />
+          <Property Name="cumplida" Type="Int32" />
+          <Property Name="obligatoria" Type="Int32" />
+          <NavigationProperty Name="politica" Relationship="focusModel.FK_Table_1_politica" FromRole="solicitudhaspolitica" ToRole="politica" />
+          <NavigationProperty Name="solicitudcredito" Relationship="focusModel.FK_Table_1_solicitudcredito" FromRole="solicitudhaspolitica" ToRole="solicitudcredito" />
+        </EntityType>
+        <Association Name="FK__solicitud__FK_co__078C1F06">
+          <End Type="focusModel.condiciones" Role="condiciones" Multiplicity="0..1" />
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="condiciones">
+              <PropertyRef Name="idcondiciones" />
+            </Principal>
+            <Dependent Role="solicitudcredito">
+              <PropertyRef Name="FK_condiciones" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_1_politica">
+          <End Type="focusModel.politica" Role="politica" Multiplicity="1" />
+          <End Type="focusModel.solicitudhaspolitica" Role="solicitudhaspolitica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="politica">
+              <PropertyRef Name="idpolitica" />
+            </Principal>
+            <Dependent Role="solicitudhaspolitica">
+              <PropertyRef Name="FK_politica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_1_solicitudcredito">
+          <End Type="focusModel.solicitudcredito" Role="solicitudcredito" Multiplicity="1" />
+          <End Type="focusModel.solicitudhaspolitica" Role="solicitudhaspolitica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="solicitudcredito">
+              <PropertyRef Name="idsolicitudcredito" />
+            </Principal>
+            <Dependent Role="solicitudhaspolitica">
+              <PropertyRef Name="FK_solicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="focusModelStoreContainer" CdmEntityContainer="focusEntities">
+          <EntitySetMapping Name="usuariosistema">
+            <EntityTypeMapping TypeName="focusModel.usuariosistema">
+              <MappingFragment StoreEntitySet="usuariosistema">
+                <ScalarProperty Name="apellidomaterno" ColumnName="apellidomaterno" />
+                <ScalarProperty Name="apellidopaterno" ColumnName="apellidopaterno" />
+                <ScalarProperty Name="idusuariosistema" ColumnName="idusuariosistema" />
+                <ScalarProperty Name="numempleado" ColumnName="numempleado" />
+                <ScalarProperty Name="claveacceso" ColumnName="claveacceso" />
+                <ScalarProperty Name="fecharegistro" ColumnName="fecharegistro" />
+                <ScalarProperty Name="rol_idrol" ColumnName="rol_idrol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="catalogobanco">
+            <EntityTypeMapping TypeName="focusModel.catalogobanco">
+              <MappingFragment StoreEntitySet="catalogobanco">
+                <ScalarProperty Name="nombrebanco" ColumnName="nombrebanco" />
+                <ScalarProperty Name="idbanco" ColumnName="idbanco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="catalogodocumentos">
+            <EntityTypeMapping TypeName="focusModel.catalogodocumentos">
+              <MappingFragment StoreEntitySet="catalogodocumentos">
+                <ScalarProperty Name="archivobinario" ColumnName="archivobinario" />
+                <ScalarProperty Name="tipodocumento" ColumnName="tipodocumento" />
+                <ScalarProperty Name="iddocumento" ColumnName="iddocumento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="catalogostatus">
+            <EntityTypeMapping TypeName="focusModel.catalogostatus">
+              <MappingFragment StoreEntitySet="catalogostatus">
+                <ScalarProperty Name="tipostatus" ColumnName="tipostatus" />
+                <ScalarProperty Name="idcatalogostatus" ColumnName="idcatalogostatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="centrotrabajo">
+            <EntityTypeMapping TypeName="focusModel.centrotrabajo">
+              <MappingFragment StoreEntitySet="centrotrabajo">
+                <ScalarProperty Name="cliente_idcliente" ColumnName="cliente_idcliente" />
+                <ScalarProperty Name="municipio_idmunicipio" ColumnName="municipio_idmunicipio" />
+                <ScalarProperty Name="quincenados" ColumnName="quincenados" />
+                <ScalarProperty Name="quincenauno" ColumnName="quincenauno" />
+                <ScalarProperty Name="desempeño" ColumnName="desempeño" />
+                <ScalarProperty Name="ocupacion" ColumnName="ocupacion" />
+                <ScalarProperty Name="antiguedad" ColumnName="antiguedad" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="numempleado" ColumnName="numempleado" />
+                <ScalarProperty Name="nombreempresa" ColumnName="nombreempresa" />
+                <ScalarProperty Name="idcentrotrabajo" ColumnName="idcentrotrabajo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cliente">
+            <EntityTypeMapping TypeName="focusModel.cliente">
+              <MappingFragment StoreEntitySet="cliente">
+                <ScalarProperty Name="firmaelectronica" ColumnName="firmaelectronica" />
+                <ScalarProperty Name="fecharegistro" ColumnName="fecharegistro" />
+                <ScalarProperty Name="fechanac" ColumnName="fechanac" />
+                <ScalarProperty Name="clientecol" ColumnName="clientecol" />
+                <ScalarProperty Name="curp" ColumnName="curp" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="rfc" ColumnName="rfc" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="credito">
+            <EntityTypeMapping TypeName="focusModel.credito">
+              <MappingFragment StoreEntitySet="credito">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="solicitudcredito_idsolicitudcredito" ColumnName="solicitudcredito_idsolicitudcredito" />
+                <ScalarProperty Name="usuariosistema_idusuariosistema" ColumnName="usuariosistema_idusuariosistema" />
+                <ScalarProperty Name="saldorestante" ColumnName="saldorestante" />
+                <ScalarProperty Name="idcredito" ColumnName="idcredito" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cuentacliente">
+            <EntityTypeMapping TypeName="focusModel.cuentacliente">
+              <MappingFragment StoreEntitySet="cuentacliente">
+                <ScalarProperty Name="banco_idbanco" ColumnName="banco_idbanco" />
+                <ScalarProperty Name="cliente_idcliente" ColumnName="cliente_idcliente" />
+                <ScalarProperty Name="claveinterbancaria" ColumnName="claveinterbancaria" />
+                <ScalarProperty Name="numerotarjetadebito" ColumnName="numerotarjetadebito" />
+                <ScalarProperty Name="idcuentacliente" ColumnName="idcuentacliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="direccioncliente">
+            <EntityTypeMapping TypeName="focusModel.direccioncliente">
+              <MappingFragment StoreEntitySet="direccioncliente">
+                <ScalarProperty Name="municipio_idmunicipio" ColumnName="municipio_idmunicipio" />
+                <ScalarProperty Name="cliente_idcliente" ColumnName="cliente_idcliente" />
+                <ScalarProperty Name="numinterior" ColumnName="numinterior" />
+                <ScalarProperty Name="numexterior" ColumnName="numexterior" />
+                <ScalarProperty Name="colonia" ColumnName="colonia" />
+                <ScalarProperty Name="calle" ColumnName="calle" />
+                <ScalarProperty Name="iddireccioncliente" ColumnName="iddireccioncliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="documentosolicitud">
+            <EntityTypeMapping TypeName="focusModel.documentosolicitud">
+              <MappingFragment StoreEntitySet="documentosolicitud">
+                <ScalarProperty Name="catalogodocumentos_numdocumento" ColumnName="catalogodocumentos_numdocumento" />
+                <ScalarProperty Name="nombrearchivo" ColumnName="nombrearchivo" />
+                <ScalarProperty Name="extension" ColumnName="extension" />
+                <ScalarProperty Name="solicitudcredito_idsolicitudcredito" ColumnName="solicitudcredito_idsolicitudcredito" />
+                <ScalarProperty Name="archivobinario" ColumnName="archivobinario" />
+                <ScalarProperty Name="fecharegistro" ColumnName="fecharegistro" />
+                <ScalarProperty Name="iddocumentosolicitud" ColumnName="iddocumentosolicitud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estado">
+            <EntityTypeMapping TypeName="focusModel.estado">
+              <MappingFragment StoreEntitySet="estado">
+                <ScalarProperty Name="nombreestado" ColumnName="nombreestado" />
+                <ScalarProperty Name="idestado" ColumnName="idestado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="municipio">
+            <EntityTypeMapping TypeName="focusModel.municipio">
+              <MappingFragment StoreEntitySet="municipio">
+                <ScalarProperty Name="estado_idestado" ColumnName="estado_idestado" />
+                <ScalarProperty Name="nombremunicipio" ColumnName="nombremunicipio" />
+                <ScalarProperty Name="idmunicipio" ColumnName="idmunicipio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pagoamortizacion">
+            <EntityTypeMapping TypeName="focusModel.pagoamortizacion">
+              <MappingFragment StoreEntitySet="pagoamortizacion">
+                <ScalarProperty Name="pagado" ColumnName="pagado" />
+                <ScalarProperty Name="pagototal" ColumnName="pagototal" />
+                <ScalarProperty Name="solicitudcredito_idsolicitudcredito" ColumnName="solicitudcredito_idsolicitudcredito" />
+                <ScalarProperty Name="capital" ColumnName="capital" />
+                <ScalarProperty Name="interes" ColumnName="interes" />
+                <ScalarProperty Name="pago" ColumnName="pago" />
+                <ScalarProperty Name="pagoiva" ColumnName="pagoiva" />
+                <ScalarProperty Name="iva" ColumnName="iva" />
+                <ScalarProperty Name="periodo" ColumnName="periodo" />
+                <ScalarProperty Name="idpagoamortizacion" ColumnName="idpagoamortizacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="politica">
+            <EntityTypeMapping TypeName="focusModel.politica">
+              <MappingFragment StoreEntitySet="politica">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="vigencia" ColumnName="vigencia" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="idpolitica" ColumnName="idpolitica" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="referenciacliente">
+            <EntityTypeMapping TypeName="focusModel.referenciacliente">
+              <MappingFragment StoreEntitySet="referenciacliente">
+                <ScalarProperty Name="cliente_idcliente" ColumnName="cliente_idcliente" />
+                <ScalarProperty Name="horariodisponible" ColumnName="horariodisponible" />
+                <ScalarProperty Name="rfccliente" ColumnName="rfccliente" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="relacion" ColumnName="relacion" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="idreferenciacliente" ColumnName="idreferenciacliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rol">
+            <EntityTypeMapping TypeName="focusModel.rol">
+              <MappingFragment StoreEntitySet="rol">
+                <ScalarProperty Name="nombrerol" ColumnName="nombrerol" />
+                <ScalarProperty Name="idrol" ColumnName="idrol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="solicitudcredito">
+            <EntityTypeMapping TypeName="focusModel.solicitudcredito">
+              <MappingFragment StoreEntitySet="solicitudcredito">
+                <ScalarProperty Name="montototal" ColumnName="montototal" />
+                <ScalarProperty Name="numamortizaciones" ColumnName="numamortizaciones" />
+                <ScalarProperty Name="diaspago" ColumnName="diaspago" />
+                <ScalarProperty Name="periodocidad" ColumnName="periodocidad" />
+                <ScalarProperty Name="FK_condiciones" ColumnName="FK_condiciones" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="saldorestante" ColumnName="saldorestante" />
+                <ScalarProperty Name="asesor_idusuariosistema" ColumnName="asesor_idusuariosistema" />
+                <ScalarProperty Name="analista_idusuariosistema" ColumnName="analista_idusuariosistema" />
+                <ScalarProperty Name="fechasolicitud" ColumnName="fechasolicitud" />
+                <ScalarProperty Name="montoparcialidad" ColumnName="montoparcialidad" />
+                <ScalarProperty Name="cliente_idcliente" ColumnName="cliente_idcliente" />
+                <ScalarProperty Name="idsolicitudcredito" ColumnName="idsolicitudcredito" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="condiciones">
+            <EntityTypeMapping TypeName="focusModel.condiciones">
+              <MappingFragment StoreEntitySet="condiciones">
+                <ScalarProperty Name="cat" ColumnName="cat" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="iva" ColumnName="iva" />
+                <ScalarProperty Name="tasadeinteres" ColumnName="tasadeinteres" />
+                <ScalarProperty Name="plazo" ColumnName="plazo" />
+                <ScalarProperty Name="idcondiciones" ColumnName="idcondiciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="solicitudhaspolitica">
+            <EntityTypeMapping TypeName="focusModel.solicitudhaspolitica">
+              <MappingFragment StoreEntitySet="solicitudhaspolitica">
+                <ScalarProperty Name="obligatoria" ColumnName="obligatoria" />
+                <ScalarProperty Name="cumplida" ColumnName="cumplida" />
+                <ScalarProperty Name="FK_politica" ColumnName="FK_politica" />
+                <ScalarProperty Name="FK_solicitud" ColumnName="FK_solicitud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

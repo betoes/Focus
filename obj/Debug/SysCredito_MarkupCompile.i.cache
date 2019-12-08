@@ -1,0 +1,20 @@
+﻿SysCredito
+
+
+winexe
+C#
+.cs
+C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\
+SysCredito
+none
+false
+DEBUG;TRACE
+C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\App.xaml
+131105945234
+2-924026138
+501180936326
+27487065840
+MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;
+
+True
+

@@ -8,12 +8,18 @@ namespace SysCredito.domain
 {
     class UsuarioSistema
     {
+        private int id;
         private String usuario;
         private String password;
         private DateTime fecharegistro;
         private int rol;
 
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         public string Usuario 
         { 

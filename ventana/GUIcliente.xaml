@@ -23,20 +23,30 @@
                 <RowDefinition Height="6*"/>
             </Grid.RowDefinitions>
 
-
-
-            <TextBlock x:Name="tbDatosPersonales" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left"
-                       FontSize="13" Grid.Row="0" Margin="0,0,-128,1" Padding="10" Height="50" Width="179"> Datos Personales</TextBlock>
-            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" 
-                       FontSize="13" Grid.Row="1" Margin="0,1,-128,0" Padding="10" Height="50" Width="179"> Datos de identificación</TextBlock>
-            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" 
-                       FontSize="13" Grid.Row="2" Margin="0,0,-128,1" Padding="10"  Height="50" Width="179"> Datos de dirección</TextBlock>
-            <TextBlock Foreground="White" VerticalAlignment="Center" x:Name="tbDatosTrabajo" 
-                       FontSize="13" Grid.Row="3" Margin="0,1,-128,0" Padding="10"  Height="50"> Datos de trabajo</TextBlock>
-            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" 
-                       FontSize="13" Grid.Row="4" Margin="0,0,-128,1" Padding="10"  Height="50" Width="179"> Datos bancarios</TextBlock>
-            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" 
-                       FontSize="13" Grid.Row="5" Margin="0,1,-128,0" Padding="10"  Height="50" Width="179"> Datos de contacto</TextBlock>
+            <Grid Grid.Row="0" x:Name="tbDatosPersonales">
+                <TextBlock  VerticalAlignment="Center" Foreground="White"
+                           FontSize="13" Padding="10, 0, 0, 0">Datos Personales</TextBlock>
+            </Grid>
+            <Grid Grid.Row="1" x:Name="tbDatosIdentificacion">
+                <TextBlock  VerticalAlignment="Center" Foreground="White"
+                           FontSize="13" Padding="10, 0, 0, 0">Datos Identificación</TextBlock>
+            </Grid>
+            <Grid Grid.Row="2" x:Name="tbDatosDireccion">
+                <TextBlock  VerticalAlignment="Center" Foreground="White"
+                           FontSize="13" Padding="10, 0, 0, 0">Datos Direccion</TextBlock>
+            </Grid>
+            <Grid Grid.Row="3" x:Name="tbDatosTrabajo">
+                <TextBlock  VerticalAlignment="Center" Foreground="White"
+                           FontSize="13" Padding="10, 0, 0, 0">Datos Trabajo</TextBlock>
+            </Grid>
+            <Grid Grid.Row="4" x:Name="tbDatosBancarios">
+                <TextBlock  VerticalAlignment="Center" Foreground="White"
+                           FontSize="13" Padding="10, 0, 0, 0">Datos Bancarios</TextBlock>
+            </Grid>
+            <Grid Grid.Row="5" x:Name="tbDatosContacto">
+                <TextBlock  VerticalAlignment="Center" Foreground="White"
+                           FontSize="13" Padding="10, 0, 0, 0">Datos Contacto</TextBlock>
+            </Grid>
 
         </Grid>
 

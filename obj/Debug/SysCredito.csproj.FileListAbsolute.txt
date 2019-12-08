@@ -22,7 +22,6 @@ C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\SysCredito.exe
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\SysCredito.pdb
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\user_control\prueba.g.cs
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\user_control\prueba.baml
-<<<<<<< HEAD
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\SysCredito.exe.config
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\SysCredito.exe
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\SysCredito.pdb
@@ -51,12 +50,6 @@ C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\SysCredito.csproj.CopyComplete
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\SysCredito.exe
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\SysCredito.pdb
-=======
-C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ICSharpCode.AvalonEdit.dll
-C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
-C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ICSharpCode.AvalonEdit.xml
-C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\GeneratedInternalTypeHelper.g.cs
->>>>>>> 8f9ac487abefafb06bb3dff13ae102aaed4f58cd
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\ICSharpCode.AvalonEdit.dll
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\ICSharpCode.AvalonEdit.xml

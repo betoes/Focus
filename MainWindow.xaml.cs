@@ -33,7 +33,7 @@ namespace SysCredito
 
             String user = txt_Usuario.Text;
             String pass = txt_Password.Password;
-            UsuarioSistema usuarioSistema;
+            usuariosistema usuarioSistema;
 
             if (user != "" && pass != "")
             {
@@ -49,7 +49,7 @@ namespace SysCredito
                     else
                     {
 
-                        int rol = usuarioSistema.Rol;
+                        int rol = usuarioSistema.rol_idrol;
 
                         switch (rol)
                         {
