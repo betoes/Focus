@@ -40,10 +40,12 @@ namespace SysCredito
 
                 try
                 {
+                    Console.WriteLine("pasa");
                     usuarioSistema = UsuarioSistemaDAO.login(user, pass);
 
                     if (usuarioSistema == null)
                     {
+                        Console.WriteLine("pasa");
                         MessageBox.Show(" No existe el usuario  ");
                     }
                     else
@@ -71,6 +73,7 @@ namespace SysCredito
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine("pasa ex");
                     String str = ex.Message;
                 }
             }

@@ -20,8 +20,9 @@ namespace SysCredito.model.dao
         {
             using (FOCUSEntities db = new FOCUSEntities())
             {
-                var usuario = db.usuariosistema.Where(d => d.numempleado == user && d.claveacceso == pass);
-                return (usuariosistema)usuario;
+                usuariosistema usuario = new usuariosistema();
+                usuario = db.usuariosistema.Where(d => d.numempleado == user && d.claveacceso == pass).FirstOrDefault();
+                return usuario;
             }
 
         }

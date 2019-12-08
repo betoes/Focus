@@ -73,25 +73,6 @@ C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIcliente.baml
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIAsesorprincipal.g.cs
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIAsesorprincipal.baml
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIcliente.baml
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIAmortizacion.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUICaratulaContrato.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIDatosPersonales.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIDatosTrabajo.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIRegistroClientes.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIRegistroMonto_Condiciones.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUISolicitudesAnalista.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUISolicitudesGenerales.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIVisualizacionDocumento.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\prueba.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIAsesorprincipal.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIcliente.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\App.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_MarkupCompile.cache
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_MarkupCompile.lref
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_Content.g.cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\MainWindow.baml
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\MainWindow.g.cs
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\SysCredito.exe.config
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\SysCredito.exe
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\SysCredito.pdb
@@ -108,6 +89,25 @@ C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\IC
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\MaterialDesignColors.pdb
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\MainWindow.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIcliente.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\MainWindow.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIAmortizacion.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUICaratulaContrato.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIDatosPersonales.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIDatosTrabajo.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIRegistroClientes.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIRegistroMonto_Condiciones.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUISolicitudesAnalista.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUISolicitudesGenerales.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIVisualizacionDocumento.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\prueba.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIAsesorprincipal.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIcliente.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\App.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_Content.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_MarkupCompile.cache
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_MarkupCompile.lref
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\App.baml
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIAmortizacion.baml
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUICaratulaContrato.baml

@@ -1,4 +1,5 @@
-﻿using SysCredito.model.db;
+﻿using SysCredito.EntiteFramework;
+using SysCredito.model.db;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -15,42 +16,23 @@ namespace SysCredito.model.dao
         private static SqlCommand command;
         private static SqlDataReader reader = null;
 
+        private static FOCUSEntities entities = new FOCUSEntities();
+
         public ClienteDAO()
         {
 
         }
-        public static void ObtenerClientes()
+        public static List<cliente> ObtenerClientes()
         {
-            
-            try
-            {
-                conn = ConnectionUtils.getConnection();
-                query = "SELECT rfc,nombres,apellidos FROM dbo.cliente";
+            Console.WriteLine(entities.cliente.ToList().Count());
+            return entities.cliente.ToList();
 
-                if (conn != null)
-                {
-                    command = new SqlCommand(query, conn);
-                    reader = command.ExecuteReader();
 
-                    while (reader.Read())
-                    {
-                        
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.Error.Write(ex.Message);
-            }
-            finally
-            {
-                if (conn != null)
-                {
-                    conn.Close();
-                }
-            }
+        }
 
-           
+        public static List<cliente> buscarCliente(String rfc)
+        {
+            return entities.cliente.Where(d => d.rfc == rfc).ToList();
         }
 
        
