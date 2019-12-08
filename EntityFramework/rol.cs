@@ -7,24 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class catalogodocumentos
+    public partial class rol
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public catalogodocumentos()
+        public rol()
         {
-            this.documentosolicitud = new HashSet<documentosolicitud>();
+            this.usuariosistema = new HashSet<usuariosistema>();
         }
     
-        public int iddocumento { get; set; }
-        public string tipodocumento { get; set; }
-        public byte[] archivobinario { get; set; }
+        public int idrol { get; set; }
+        public string nombrerol { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<documentosolicitud> documentosolicitud { get; set; }
+        public virtual ICollection<usuariosistema> usuariosistema { get; set; }
     }
 }

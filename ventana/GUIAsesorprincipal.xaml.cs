@@ -32,16 +32,22 @@ namespace SysCredito.ventana
             closeWindows();
         }
 
+        private void cargarRegistroClientes(object sender, RoutedEventArgs e)
+        {
+        GUIRegistroClientes uc_registro_clientes = new GUIRegistroClientes();
+                ucs.Children.Clear();
+                ucs.Children.Add(uc_registro_clientes);
+        }
+
         public void closeWindows()
         {
             this.Close();
         }
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            GUIRegistroClientes uc_registro_clientes = new GUIRegistroClientes();
-            ucs.Children.Clear();
-            ucs.Children.Add(uc_registro_clientes);
+           
+            
 
-        }   
+        }
     }
 }

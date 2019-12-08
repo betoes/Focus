@@ -7,21 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class credito
+    public partial class pagoamortizacion
     {
-        public int idcredito { get; set; }
-        public string saldorestante { get; set; }
-        public int usuariosistema_idusuariosistema { get; set; }
+        public int idpagoamortizacion { get; set; }
+        public string periodo { get; set; }
+        public int iva { get; set; }
+        public double pagoiva { get; set; }
+        public double pago { get; set; }
+        public double interes { get; set; }
+        public double capital { get; set; }
         public int solicitudcredito_idsolicitudcredito { get; set; }
-        public int status { get; set; }
+        public double pagototal { get; set; }
+        public byte[] pagado { get; set; }
     
-        public virtual catalogostatus catalogostatus { get; set; }
         public virtual solicitudcredito solicitudcredito { get; set; }
-        public virtual usuariosistema usuariosistema { get; set; }
     }
 }

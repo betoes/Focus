@@ -25,10 +25,10 @@ namespace SysCredito
     {
         public MainWindow()
         {
-            InitializeComponent();
+            
         }
 
-        private void iniciarSesion(object sender, RoutedEventArgs e)
+        /private void iniciarSesion(object sender, RoutedEventArgs e)
         {
 
             String user = txt_Usuario.Text;
@@ -57,8 +57,8 @@ namespace SysCredito
                                 GUIAsesorprincipal guiAsesorprincipal = new GUIAsesorprincipal();
                                 guiAsesorprincipal.Show();
                                 closeWindows();
-                                break;
-
+                               break;
+        
                             case 2:
                                 GUIcliente guiCliente = new GUIcliente();
                                 guiCliente.Show();

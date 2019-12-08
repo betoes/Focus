@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;

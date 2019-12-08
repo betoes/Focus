@@ -7,26 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class catalogostatus
+    public partial class municipio
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public catalogostatus()
+        public municipio()
         {
-            this.solicitudcredito = new HashSet<solicitudcredito>();
-            this.credito = new HashSet<credito>();
+            this.centrotrabajo = new HashSet<centrotrabajo>();
+            this.direccioncliente = new HashSet<direccioncliente>();
         }
     
-        public int idcatalogostatus { get; set; }
-        public string tipostatus { get; set; }
+        public int idmunicipio { get; set; }
+        public string nombremunicipio { get; set; }
+        public int estado_idestado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<solicitudcredito> solicitudcredito { get; set; }
+        public virtual ICollection<centrotrabajo> centrotrabajo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<credito> credito { get; set; }
+        public virtual ICollection<direccioncliente> direccioncliente { get; set; }
+        public virtual estado estado { get; set; }
     }
 }

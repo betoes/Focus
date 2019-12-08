@@ -7,20 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class cuentacliente
+    public partial class credito
     {
-        public int idcuentacliente { get; set; }
-        public string numerotarjetadebito { get; set; }
-        public string claveinterbancaria { get; set; }
-        public int cliente_idcliente { get; set; }
-        public int banco_idbanco { get; set; }
+        public int idcredito { get; set; }
+        public string saldorestante { get; set; }
+        public int usuariosistema_idusuariosistema { get; set; }
+        public int solicitudcredito_idsolicitudcredito { get; set; }
+        public int status { get; set; }
     
-        public virtual catalogobanco catalogobanco { get; set; }
-        public virtual cliente cliente { get; set; }
+        public virtual catalogostatus catalogostatus { get; set; }
+        public virtual solicitudcredito solicitudcredito { get; set; }
+        public virtual usuariosistema usuariosistema { get; set; }
     }
 }

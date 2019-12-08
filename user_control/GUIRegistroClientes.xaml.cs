@@ -23,18 +23,21 @@ namespace SysCredito.user_control
     /// </summary>
     public partial class GUIRegistroClientes : UserControl
     {
+        FOCUSEntities entities = new FOCUSEntities();
+
         public GUIRegistroClientes()
         {
             InitializeComponent();
 
             List<Cliente> clientes = new List<Cliente>();
-            clientes = ClienteDAO.ObtenerClientes();
 
-            if (clientes.Count > 0)
+             
+
+            if (entities.cliente.ToList().Count > 0)
             {
 
                 clientes_view.Items.Clear();
-                clientes_view.ItemsSource = clientes;
+                clientes_view.ItemsSource = entities.cliente.ToList();
 
             }
             else

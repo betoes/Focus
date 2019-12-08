@@ -19,7 +19,7 @@
 
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_Cliente"></MenuItem>
+            <MenuItem x:Name="itemClientes" Header="_Cliente" Click="cargarRegistroClientes"></MenuItem>
             <MenuItem Header="_Solicitudes"></MenuItem>
             <MenuItem x:Name="itemCerrarSesion"  Header="_Cerrar Sesión" Click="CerrarSesion" ></MenuItem>
         </Menu>

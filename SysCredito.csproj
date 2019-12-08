@@ -59,6 +59,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -87,17 +89,80 @@
     <Compile Include="domain\DatosTrabajo.cs" />
     <Compile Include="domain\SolicitudDeCredito.cs" />
     <Compile Include="domain\UsuarioSistema.cs" />
+    <Compile Include="catalogobanco.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="catalogodocumentos.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="catalogostatus.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="centrotrabajo.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cliente.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
     <Compile Include="model\dao\ClienteDAO.cs" />
+    <Compile Include="condiciones.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credito.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cuentacliente.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
     <Compile Include="model\dao\DatosTrabajoDAO.cs" />
-    <Compile Include="model\dao\SolicitudDAO.Context.cs">
+    <Compile Include="direccioncliente.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="documentosolicitud.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="estado.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="municipio.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pagoamortizacion.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="politica.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="referenciacliente.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rol.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="solicitudcredito.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudDAO.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SolicitudDAO.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\dao\SolicitudDAO.Designer.cs">
+    <Compile Include="model\dao\SolicitudDAO.cs" />
+    <Compile Include="FOCUSEntity.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SolicitudDAO.edmx</DependentUpon>
+      <DependentUpon>FOCUSEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudDAO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="solicitudhaspolitica.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuariosistema.cs">
+      <DependentUpon>SolicitudDAO.tt</DependentUpon>
     </Compile>
     <Compile Include="model\dao\UsuarioSistemaDAO.cs" />
     <Compile Include="user_control\GUIAmortizacion.xaml.cs">
@@ -216,12 +281,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="model\dao\SolicitudDAO.edmx">
+    <EntityDeploy Include="FOCUSEntity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SolicitudDAO.Designer.cs</LastGenOutput>
+      <LastGenOutput>FOCUSEntity.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="model\dao\SolicitudDAO.edmx.diagram">
-      <DependentUpon>SolicitudDAO.edmx</DependentUpon>
+    <None Include="FOCUSEntity.edmx.diagram">
+      <DependentUpon>FOCUSEntity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -233,9 +298,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="model\dao\SolicitudDAO.Context.tt">
+    <Content Include="SolicitudDAO.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SolicitudDAO.Context.cs</LastGenOutput>
+      <DependentUpon>FOCUSEntity.edmx</DependentUpon>
+    </Content>
+    <Content Include="SolicitudDAO.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FOCUSEntity.edmx</DependentUpon>
+      <LastGenOutput>SolicitudDAO.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FOCUSEntities : DbContext
+    public partial class focusEntities : DbContext
     {
-        public FOCUSEntities()
-            : base("name=FOCUSEntities")
+        public focusEntities()
+            : base("name=focusEntities")
         {
         }
     

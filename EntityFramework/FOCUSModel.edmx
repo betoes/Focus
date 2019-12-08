@@ -1109,7 +1109,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="FOCUSEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="focusEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="catalogobanco" EntityType="Self.catalogobanco" />
           <EntitySet Name="catalogodocumentos" EntityType="Self.catalogodocumentos" />
           <EntitySet Name="catalogostatus" EntityType="Self.catalogostatus" />
@@ -1223,7 +1223,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FOCUSModelStoreContainer" CdmEntityContainer="FOCUSEntities">
+        <EntityContainerMapping StorageEntityContainer="FOCUSModelStoreContainer" CdmEntityContainer="focusEntities">
           <EntitySetMapping Name="catalogobanco">
             <EntityTypeMapping TypeName="FOCUSModel.catalogobanco">
               <MappingFragment StoreEntitySet="catalogobanco">

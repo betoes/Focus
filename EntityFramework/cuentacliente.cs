@@ -7,26 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class centrotrabajo
+    public partial class cuentacliente
     {
-        public int idcentrotrabajo { get; set; }
-        public string nombreempresa { get; set; }
-        public string numempleado { get; set; }
-        public string direccion { get; set; }
-        public int antiguedad { get; set; }
-        public string ocupacion { get; set; }
-        public string desempeño { get; set; }
-        public System.DateTime quincenauno { get; set; }
-        public System.DateTime quincenados { get; set; }
-        public int municipio_idmunicipio { get; set; }
+        public int idcuentacliente { get; set; }
+        public string numerotarjetadebito { get; set; }
+        public string claveinterbancaria { get; set; }
         public int cliente_idcliente { get; set; }
+        public int banco_idbanco { get; set; }
     
+        public virtual catalogobanco catalogobanco { get; set; }
         public virtual cliente cliente { get; set; }
-        public virtual municipio municipio { get; set; }
     }
 }

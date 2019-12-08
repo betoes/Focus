@@ -7,23 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class catalogobanco
+    public partial class condiciones
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public catalogobanco()
+        public condiciones()
         {
-            this.cuentacliente = new HashSet<cuentacliente>();
+            this.solicitudcredito = new HashSet<solicitudcredito>();
         }
     
-        public int idbanco { get; set; }
-        public string nombrebanco { get; set; }
+        public string idcondiciones { get; set; }
+        public int plazo { get; set; }
+        public double tasadeinteres { get; set; }
+        public double iva { get; set; }
+        public int status { get; set; }
+        public double cat { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cuentacliente> cuentacliente { get; set; }
+        public virtual ICollection<solicitudcredito> solicitudcredito { get; set; }
     }
 }

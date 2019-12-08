@@ -7,23 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class estado
+    public partial class catalogodocumentos
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public estado()
+        public catalogodocumentos()
         {
-            this.municipio = new HashSet<municipio>();
+            this.documentosolicitud = new HashSet<documentosolicitud>();
         }
     
-        public int idestado { get; set; }
-        public string nombreestado { get; set; }
+        public int iddocumento { get; set; }
+        public string tipodocumento { get; set; }
+        public byte[] archivobinario { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<municipio> municipio { get; set; }
+        public virtual ICollection<documentosolicitud> documentosolicitud { get; set; }
     }
 }

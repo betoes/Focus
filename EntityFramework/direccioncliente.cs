@@ -7,23 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class referenciacliente
+    public partial class direccioncliente
     {
-        public int idreferenciacliente { get; set; }
-        public string nombres { get; set; }
-        public string apellidos { get; set; }
-        public string relacion { get; set; }
-        public string telefono { get; set; }
-        public string direccion { get; set; }
-        public string rfccliente { get; set; }
-        public string horariodisponible { get; set; }
+        public int iddireccioncliente { get; set; }
+        public string calle { get; set; }
+        public string colonia { get; set; }
+        public string numexterior { get; set; }
+        public string numinterior { get; set; }
         public int cliente_idcliente { get; set; }
+        public int municipio_idmunicipio { get; set; }
     
         public virtual cliente cliente { get; set; }
+        public virtual municipio municipio { get; set; }
     }
 }

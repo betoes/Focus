@@ -130,3 +130,8 @@ C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\Sy
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.csproj.GenerateResource.cache
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.csproj.CoreCompileInputs.cache
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.csproj.CopyComplete
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_Content.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\EntityFramework.dll
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\EntityFramework.xml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\EntityFramework.SqlServer.xml

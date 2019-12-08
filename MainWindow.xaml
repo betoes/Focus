@@ -65,7 +65,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Height="40" Width="150" Margin="150 0 10 100" Click="iniciarSesion">Login</Button>
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Height="40" Width="150" Margin="150 0 10 100" Click="iniciarSesion" >Login</Button>
                 </Grid>
                 <Grid Grid.Column="1">
                     <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Height="40" Width="150" Margin="10 0 150 100">Cancelar</Button>

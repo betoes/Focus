@@ -7,23 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SysCredito.model.dao
+namespace SysCredito.EntityFramework
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class rol
+    public partial class politica
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public rol()
+        public politica()
         {
-            this.usuariosistema = new HashSet<usuariosistema>();
+            this.solicitudhaspolitica = new HashSet<solicitudhaspolitica>();
         }
     
-        public int idrol { get; set; }
-        public string nombrerol { get; set; }
+        public int idpolitica { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
+        public System.DateTime vigencia { get; set; }
+        public int status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<usuariosistema> usuariosistema { get; set; }
+        public virtual ICollection<solicitudhaspolitica> solicitudhaspolitica { get; set; }
     }
 }
