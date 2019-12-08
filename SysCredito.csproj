@@ -83,6 +83,81 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EntiteFramework\catalogobanco.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\catalogodocumentos.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\catalogostatus.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\centrotrabajo.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\cliente.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\condiciones.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\credito.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\cuentacliente.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\direccioncliente.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\documentosolicitud.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\estado.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\FOCUSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOCUSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\FOCUSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\FOCUSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOCUSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\municipio.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\pagoamortizacion.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\politica.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\referenciacliente.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\rol.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\solicitudcredito.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\solicitudhaspolitica.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\usuariosistema.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="model\dao\ClienteDAO.cs" />
     <Compile Include="model\dao\DatosTrabajoDAO.cs" />
     <Compile Include="model\dao\UsuarioSistemaDAO.cs" />
@@ -126,6 +201,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="user_control\GUIAmortizacion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -194,6 +273,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="EntiteFramework\FOCUSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FOCUSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntiteFramework\FOCUSModel.edmx.diagram">
+      <DependentUpon>FOCUSModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -205,6 +291,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntiteFramework\FOCUSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FOCUSModel.edmx</DependentUpon>
+      <LastGenOutput>FOCUSModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntiteFramework\FOCUSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FOCUSModel.edmx</DependentUpon>
+      <LastGenOutput>FOCUSModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

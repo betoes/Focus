@@ -1,4 +1,5 @@
-﻿using SysCredito.domain;
+﻿
+using SysCredito.EntiteFramework;
 using SysCredito.model.dao;
 using System;
 using System.Collections.Generic;
@@ -29,8 +30,7 @@ namespace SysCredito.user_control
         {
             InitializeComponent();
 
-            List<Cliente> clientes = new List<Cliente>();
-
+           
              
 
             if (entities.cliente.ToList().Count > 0)
@@ -55,37 +55,13 @@ namespace SysCredito.user_control
         private void Bt_Buscar_Click(object sender, RoutedEventArgs e)
         {
             string rfc = tb_RFC.Text;
-            Cliente cliente = new Cliente();
+           
 
-            cliente = ClienteDAO.buscar_cliente(rfc);
-
-            if (cliente != null)
-            {
-                clientes_view.Items.Clear();
-                clientes_view.Items.Add(cliente);
-            }
-            else
-            {
-                MessageBox.Show("no se encontro el cliente con ese RFC");
-            }
         }
 
         private void Bt_Buscar_Click_1(object sender, RoutedEventArgs e)
         {
-            Cliente cliente = ClienteDAO.buscar_cliente(tb_RFC.Text);
-
-            if (cliente != null)
-            {
-                clientes_view.Items.Clear();
-                List<Cliente> clientes = new List<Cliente>();
-                clientes.Add(cliente);
-                clientes_view.ItemsSource = clientes;
-                bt_solicitud.IsEnabled = true;
-            }
-            else
-            {
-                MessageBox.Show("Cliente no encontrado");
-            }
+            
 
         }
 

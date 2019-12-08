@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SysCredito.domain;
+
 using System.Globalization;
+using SysCredito.EntiteFramework;
 
 namespace SysCredito.model.dao
 {
@@ -17,7 +18,7 @@ namespace SysCredito.model.dao
 
         public static usuariosistema login(String user, String pass)
         {
-            using (focusEntities db = new focusEntities())
+            using (FOCUSEntities db = new FOCUSEntities())
             {
                 var usuario = db.usuariosistema.Where(d => d.numempleado == user && d.claveacceso == pass);
                 return (usuariosistema)usuario;
@@ -28,7 +29,7 @@ namespace SysCredito.model.dao
         public static Boolean registrarUsuario(usuariosistema usuario)
         {
             bool registrado = false;
-            using (focusEntities db = new focusEntities())
+            using (FOCUSEntities db = new FOCUSEntities())
             {
                 db.usuariosistema.Add(usuario);
                 db.SaveChanges();

@@ -1,4 +1,4 @@
-﻿using SysCredito.domain;
+﻿
 using SysCredito.model.db;
 using System;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace SysCredito.model.dao
 
         public DatosTrabajoDAO() { }
 
-        public static void guardarDatosTrabajo(DatosTrabajo data)
+        public static void guardarDatosTrabajo()
         {
             try
             {
@@ -30,16 +30,7 @@ namespace SysCredito.model.dao
 
                 if (conn != null)
                 {
-                    command = new SqlCommand(query, conn);
-                    command.Parameters.AddWithValue("@id", data.Id.ToString());
-                    command.Parameters.AddWithValue("@nombre_e", data.Id.ToString());
-                    command.Parameters.AddWithValue("@num_empledo", data.Id.ToString());
-                    command.Parameters.AddWithValue("@direccion", data.Id.ToString());
-                    command.Parameters.AddWithValue("@antiguedas", data.Id.ToString());
-                    command.Parameters.AddWithValue("@desempeno", data.Id.ToString());
-                    command.Parameters.AddWithValue("@ocupacion", data.Id.ToString());
-                    command.Parameters.AddWithValue("@p_quincena", data.Id.ToString());
-                    command.Parameters.AddWithValue("@u_quincena", data.Id.ToString());
+                    
 
                     command.ExecuteNonQuery();
 
