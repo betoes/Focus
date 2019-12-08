@@ -15,6 +15,15 @@
              FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        
+        <FlowDocumentScrollViewer Name="caratula_document">
+            <FlowDocument>
+
+                <Paragraph TextAlignment="Center" FontWeight="Black">
+                    <Run Text="Caratula de contrato"/>
+                </Paragraph>
+
+
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
     </Grid>
 </UserControl>

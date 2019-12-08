@@ -52,10 +52,6 @@
         <Label Content="Desempeño" Grid.Column="1" HorizontalAlignment="Center" Margin="114,298,336,127" RenderTransformOrigin="1.055,0.8" Width="83"/>
         <Label Content="Última quincena" Grid.Column="1" HorizontalAlignment="Center" Margin="50,336,378,89" RenderTransformOrigin="1.055,0.8" Width="105"/>
         <Label Content="Penúltima quincena" Grid.Column="1" HorizontalAlignment="Center" Margin="303,336,147,89" RenderTransformOrigin="1.055,0.8" Width="83"/>
-        
-        
-        <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="419,408,0,0" VerticalAlignment="Top" 
-                Background="#303F9F" Width="79" Height="23"/>
 
 
     </Grid>

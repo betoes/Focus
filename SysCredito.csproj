@@ -125,6 +125,7 @@
     <Compile Include="domain\Asesor.cs" />
     <Compile Include="domain\Cliente.cs" />
     <Compile Include="domain\DatosPersonales.cs" />
+    <Compile Include="domain\DatosTrabajo.cs" />
     <Compile Include="domain\SolicitudDeCredito.cs" />
     <Compile Include="domain\UsuarioSistema.cs" />
     <Compile Include="estado.cs">
@@ -144,6 +145,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>focusmodel.edmx</DependentUpon>
+    <Compile Include="model\dao\ClienteDAO.cs" />
+    <Compile Include="model\dao\DatosTrabajoDAO.cs" />
+    <Compile Include="model\dao\SolicitudDAO.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SolicitudDAO.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\dao\SolicitudDAO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SolicitudDAO.edmx</DependentUpon>
     </Compile>
     <Compile Include="model\dao\UsuarioSistemaDAO.cs" />
     <Compile Include="model\dao\DatosTrabajoDAO.cs" />
@@ -195,8 +207,14 @@
     <Compile Include="user_control\GUIRegistroMonto_Condiciones.xaml.cs">
       <DependentUpon>GUIRegistroMonto_Condiciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="user_control\GUISolicitudesAnalista.xaml.cs">
+      <DependentUpon>GUISolicitudesAnalista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="user_control\GUISolicitudesGenerales.xaml.cs">
       <DependentUpon>GUISolicitudesGenerales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIVisualizacionDocumento.xaml.cs">
+      <DependentUpon>GUIVisualizacionDocumento.xaml</DependentUpon>
     </Compile>
     <Compile Include="user_control\prueba.xaml.cs">
       <DependentUpon>prueba.xaml</DependentUpon>
@@ -246,7 +264,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="user_control\GUISolicitudesAnalista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="user_control\GUISolicitudesGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIVisualizacionDocumento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -288,6 +314,12 @@
     </EntityDeploy>
     <None Include="focusmodel.edmx.diagram">
       <DependentUpon>focusmodel.edmx</DependentUpon>
+    <EntityDeploy Include="model\dao\SolicitudDAO.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SolicitudDAO.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="model\dao\SolicitudDAO.edmx.diagram">
+      <DependentUpon>SolicitudDAO.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -318,6 +350,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>focusmodel.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    <Content Include="model\dao\SolicitudDAO.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SolicitudDAO.Context.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

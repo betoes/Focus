@@ -69,7 +69,8 @@
                 x:Name="Siguiente"
                 Content="Siguiente" Grid.Column="2"
                 Margin="30 0 30 0"
-                Height="30" Width="150" Click="Siguiente_Click"
+                Height="30" Width="150"
+                Click="Siguiente_Click"
                 />
             </Grid>
             

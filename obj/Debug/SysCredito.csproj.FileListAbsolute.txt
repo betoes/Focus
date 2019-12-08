@@ -22,7 +22,6 @@ C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\SysCredito.exe
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\SysCredito.pdb
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\user_control\prueba.g.cs
 C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\user_control\prueba.baml
-<<<<<<< HEAD
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\SysCredito.exe.config
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\SysCredito.exe
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\SysCredito.pdb
@@ -51,12 +50,6 @@ C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\SysCredito.csproj.CopyComplete
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\SysCredito.exe
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\SysCredito.pdb
-=======
-C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ICSharpCode.AvalonEdit.dll
-C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
-C:\Users\Beto Lafarc\source\repos\SysCredito\bin\Debug\ICSharpCode.AvalonEdit.xml
-C:\Users\Beto Lafarc\source\repos\SysCredito\obj\Debug\GeneratedInternalTypeHelper.g.cs
->>>>>>> 8f9ac487abefafb06bb3dff13ae102aaed4f58cd
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\ICSharpCode.AvalonEdit.dll
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\bin\Debug\ICSharpCode.AvalonEdit.xml
@@ -80,4 +73,53 @@ C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIcliente.baml
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIAsesorprincipal.g.cs
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\ventana\GUIAsesorprincipal.baml
-C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\SysCredito_Content.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.csprojAssemblyReference.cache
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\MainWindow.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIcliente.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\MainWindow.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIAmortizacion.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUICaratulaContrato.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIDatosPersonales.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIDatosTrabajo.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIRegistroClientes.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIRegistroMonto_Condiciones.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUISolicitudesGenerales.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\prueba.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIAsesorprincipal.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIcliente.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\App.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_MarkupCompile.cache
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito_MarkupCompile.lref
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.exe
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.pdb
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUISolicitudesAnalista.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIVisualizacionDocumento.g.cs
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\SysCredito.exe.config
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\SysCredito.exe
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\SysCredito.pdb
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\MaterialDesignColors.dll
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\ShowMeTheXAML.dll
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\MaterialDesignColors.pdb
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\App.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIAmortizacion.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUICaratulaContrato.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIDatosPersonales.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIDatosTrabajo.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIRegistroClientes.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIRegistroMonto_Condiciones.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUISolicitudesGenerales.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\prueba.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\ventana\GUIAsesorprincipal.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUISolicitudesAnalista.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\user_control\GUIVisualizacionDocumento.baml
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.g.resources
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.Properties.Resources.resources
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.csproj.GenerateResource.cache
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.csproj.CoreCompileInputs.cache
+C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\SysCredito.csproj.CopyComplete

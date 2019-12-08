@@ -22,7 +22,7 @@
             HorizontalAlignment="Left" Margin="156,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.561,2.603"/>
        
         <Button Content="Continuar" HorizontalAlignment="Left" Margin="674,389,0,0" VerticalAlignment="Top" 
-                Background="#303F9F" Width="auto" Height="auto" Click="Button_Click"/>
+                Background="#303F9F" Width="auto" Height="auto"/>
         <Label Content="Numero de pagos:" HorizontalAlignment="Left" Margin="131,190,0,0" FontSize="20" VerticalAlignment="Top" />
         <Label Content="Tasa de interes:" HorizontalAlignment="Left" Margin="161,234,0,0" FontSize="20" VerticalAlignment="Top" />
         <Label Content="IVA:" HorizontalAlignment="Left" Margin="261,289,0,0" FontSize="20" VerticalAlignment="Top"/>
