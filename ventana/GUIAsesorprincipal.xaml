@@ -26,15 +26,12 @@
 
 
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-
-            </Grid.ColumnDefinitions>
-            
-            <Grid Grid.Column="0">
-            </Grid>
-            <StackPanel x:Name="ucs" />
+            <Grid Grid.Row="0"/>
+            <StackPanel x:Name="ucs"  />
         </Grid>
 
 

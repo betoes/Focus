@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SysCredito.EntiteFramework;
+using SysCredito.model.dao;
 
 namespace SysCredito.user_control
 {
@@ -24,12 +26,37 @@ namespace SysCredito.user_control
         {
 
             InitializeComponent();
+            cbGenero.Items.Add("Masculino");
+            cbGenero.Items.Add("Femenino");
 
         }
 
-        private void Siguiente(object sender, RoutedEventArgs e)
+        public cliente guardarDatosPersonales()
         {
 
+            if (txtRFC.Text == ""  || txtnombre.Text == "" || txtApellidoMaterno.Text == "" || txtApellidoPaterno.Text == ""
+                || txtCURP.Text == "")
+            {
+                MessageBox.Show("Campos vacios, ingrese datos en todos los campos");
+                return null;
+            } else
+            {
+                cliente cliente = new cliente();
+                cliente.idcliente = ClienteDAO.totalClientes() + 1;
+                cliente.rfc = txtRFC.Text;
+                cliente.nombres = txtnombre.Text;
+                cliente.apellidos = txtApellidoMaterno.Text + " " + txtApellidoPaterno.Text;
+                cliente.curp = txtCURP.Text;
+                cliente.fecharegistro = DateTime.Parse(DateTime.Now.ToShortDateString());
+                cliente.fechanac = DateTime.Parse(dpFechanac.Text);
+                cliente.firmaelectronica = null;
+                cliente.Genero = cbGenero.Text;
+                return cliente;
+            }
+
+
+
         }
+       
     }
 }

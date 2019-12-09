@@ -18,9 +18,9 @@ namespace SysCredito.EntiteFramework
         public string claveinterbancaria { get; set; }
         public int cliente_idcliente { get; set; }
         public int banco_idbanco { get; set; }
-        public string numerotarjeta { get; set; }
         public string tipotarjeta { get; set; }
         public string movilasociado { get; set; }
+        public string numerotarjeta { get; set; }
     
         public virtual catalogobanco catalogobanco { get; set; }
         public virtual cliente cliente { get; set; }

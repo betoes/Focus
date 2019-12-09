@@ -22,8 +22,8 @@ namespace SysCredito.EntiteFramework
             this.direccioncliente = new HashSet<direccioncliente>();
             this.solicitudcredito = new HashSet<solicitudcredito>();
             this.referenciacliente = new HashSet<referenciacliente>();
-            this.identificacion = new HashSet<identificacion>();
             this.datoscontacto = new HashSet<datoscontacto>();
+            this.identificacion = new HashSet<identificacion>();
         }
     
         public int idcliente { get; set; }
@@ -34,6 +34,7 @@ namespace SysCredito.EntiteFramework
         public Nullable<System.DateTime> fechanac { get; set; }
         public Nullable<System.DateTime> fecharegistro { get; set; }
         public string firmaelectronica { get; set; }
+        public string Genero { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<centrotrabajo> centrotrabajo { get; set; }
@@ -46,8 +47,8 @@ namespace SysCredito.EntiteFramework
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<referenciacliente> referenciacliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<identificacion> identificacion { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<datoscontacto> datoscontacto { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<identificacion> identificacion { get; set; }
     }
 }

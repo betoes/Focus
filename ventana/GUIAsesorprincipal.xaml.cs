@@ -23,6 +23,9 @@ namespace SysCredito.ventana
         public GUIAsesorprincipal()
         {
             InitializeComponent();
+            GUIRegistroClientes uc_registro_clientes = new GUIRegistroClientes();
+            ucs.Children.Clear();
+            ucs.Children.Add(uc_registro_clientes);
         }
 
         private void CerrarSesion(object sender, RoutedEventArgs e)
@@ -32,9 +35,9 @@ namespace SysCredito.ventana
             closeWindows();
         }
 
-        private void cargarRegistroClientes(object sender, RoutedEventArgs e)
+        public void cargarRegistroClientes(object sender, RoutedEventArgs e)
         {
-        GUIRegistroClientes uc_registro_clientes = new GUIRegistroClientes();
+                GUIRegistroClientes uc_registro_clientes = new GUIRegistroClientes();
                 ucs.Children.Clear();
                 ucs.Children.Add(uc_registro_clientes);
         }

@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SysCredito.ventana;
 using SysCredito.EntiteFramework;
+using System.Windows.Forms;
 
 namespace SysCredito
 {
@@ -25,7 +26,8 @@ namespace SysCredito
     {
         public MainWindow()
         {
-            
+            InitializeComponent();
+
         }
 
         private void iniciarSesion(object sender, RoutedEventArgs e)
@@ -40,13 +42,11 @@ namespace SysCredito
 
                 try
                 {
-                    Console.WriteLine("pasa");
                     usuarioSistema = UsuarioSistemaDAO.login(user, pass);
 
                     if (usuarioSistema == null)
                     {
-                        Console.WriteLine("pasa");
-                        MessageBox.Show(" No existe el usuario  ");
+                        System.Windows.MessageBox.Show(" No existe el usuario  ");
                     }
                     else
                     {
@@ -63,8 +63,6 @@ namespace SysCredito
         
                             case 2:
                                 
-                                GUISolicitud guiCliente = new GUISolicitud();
-                                guiCliente.Show();
                                 closeWindows();
                                 break;
 
@@ -74,13 +72,12 @@ namespace SysCredito
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("pasa ex");
                     String str = ex.Message;
                 }
             }
             else
             {
-                MessageBox.Show("Ingrese un usuario y una contraseña");
+                System.Windows.MessageBox.Show("Ingrese un usuario y una contraseña");
             }
         }
         

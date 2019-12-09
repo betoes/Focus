@@ -55,6 +55,7 @@
           <Property Name="fechanac" Type="date" />
           <Property Name="fecharegistro" Type="date" />
           <Property Name="firmaelectronica" Type="nvarchar" MaxLength="20" />
+          <Property Name="Genero" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="condiciones">
           <Key>
@@ -707,8 +708,9 @@
           <NavigationProperty Name="direccioncliente" Relationship="Self.FK_cliente_idcliente" FromRole="cliente" ToRole="direccioncliente" />
           <NavigationProperty Name="solicitudcredito" Relationship="Self.FK_idcliente_2" FromRole="cliente" ToRole="solicitudcredito" />
           <NavigationProperty Name="referenciacliente" Relationship="Self.FK_refcliente_idcliente" FromRole="cliente" ToRole="referenciacliente" />
-          <NavigationProperty Name="identificacion" Relationship="FOCUSModel.FK__identific__clien__3B0BC30C" FromRole="cliente" ToRole="identificacion" />
           <NavigationProperty Name="datoscontacto" Relationship="FOCUSModel.fk_Cliente" FromRole="cliente" ToRole="datoscontacto" />
+          <NavigationProperty Name="identificacion" Relationship="FOCUSModel.FK__identific__clien__3B0BC30C" FromRole="cliente" ToRole="identificacion" />
+          <Property Name="Genero" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="condiciones">
           <Key>
@@ -745,9 +747,9 @@
           <Property Name="banco_idbanco" Type="Int32" Nullable="false" />
           <NavigationProperty Name="catalogobanco" Relationship="Self.FK_banco_1" FromRole="cuentacliente" ToRole="catalogobanco" />
           <NavigationProperty Name="cliente" Relationship="Self.FK_cliente_2" FromRole="cuentacliente" ToRole="cliente" />
-          <Property Name="numerotarjeta" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
           <Property Name="tipotarjeta" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="movilasociado" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="numerotarjeta" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="direccioncliente">
           <Key>
@@ -1275,14 +1277,14 @@
             <End Role="solicitudhaspolitica" EntitySet="solicitudhaspolitica" />
           </AssociationSet>
           <EntitySet Name="datoscontacto" EntityType="FOCUSModel.datoscontacto" />
+          <AssociationSet Name="fk_Cliente" Association="FOCUSModel.fk_Cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="datoscontacto" EntitySet="datoscontacto" />
+          </AssociationSet>
           <EntitySet Name="identificacion" EntityType="FOCUSModel.identificacion" />
           <AssociationSet Name="FK__identific__clien__3B0BC30C" Association="FOCUSModel.FK__identific__clien__3B0BC30C">
             <End Role="cliente" EntitySet="cliente" />
             <End Role="identificacion" EntitySet="identificacion" />
-          </AssociationSet>
-          <AssociationSet Name="fk_Cliente" Association="FOCUSModel.fk_Cliente">
-            <End Role="cliente" EntitySet="cliente" />
-            <End Role="datoscontacto" EntitySet="datoscontacto" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="datoscontacto">
@@ -1296,6 +1298,18 @@
           <Property Name="telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="cliente" Relationship="FOCUSModel.fk_Cliente" FromRole="datoscontacto" ToRole="cliente" />
         </EntityType>
+        <Association Name="fk_Cliente">
+          <End Type="FOCUSModel.cliente" Role="cliente" Multiplicity="0..1" />
+          <End Type="FOCUSModel.datoscontacto" Role="datoscontacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="datoscontacto">
+              <PropertyRef Name="id_Cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityType Name="identificacion">
           <Key>
             <PropertyRef Name="id_identificaion" />
@@ -1316,18 +1330,6 @@
             </Principal>
             <Dependent Role="identificacion">
               <PropertyRef Name="cliente" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_Cliente">
-          <End Type="FOCUSModel.cliente" Role="cliente" Multiplicity="0..1" />
-          <End Type="FOCUSModel.datoscontacto" Role="datoscontacto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="cliente">
-              <PropertyRef Name="idcliente" />
-            </Principal>
-            <Dependent Role="datoscontacto">
-              <PropertyRef Name="id_Cliente" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1382,6 +1384,7 @@
           <EntitySetMapping Name="cliente">
             <EntityTypeMapping TypeName="FOCUSModel.cliente">
               <MappingFragment StoreEntitySet="cliente">
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
                 <ScalarProperty Name="idcliente" ColumnName="idcliente" />
                 <ScalarProperty Name="rfc" ColumnName="rfc" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
@@ -1419,9 +1422,9 @@
           <EntitySetMapping Name="cuentacliente">
             <EntityTypeMapping TypeName="FOCUSModel.cuentacliente">
               <MappingFragment StoreEntitySet="cuentacliente">
+                <ScalarProperty Name="numerotarjeta" ColumnName="numerotarjeta" />
                 <ScalarProperty Name="movilasociado" ColumnName="movilasociado" />
                 <ScalarProperty Name="tipotarjeta" ColumnName="tipotarjeta" />
-                <ScalarProperty Name="numerotarjeta" ColumnName="numerotarjeta" />
                 <ScalarProperty Name="idcuentacliente" ColumnName="idcuentacliente" />
                 <ScalarProperty Name="claveinterbancaria" ColumnName="claveinterbancaria" />
                 <ScalarProperty Name="cliente_idcliente" ColumnName="cliente_idcliente" />

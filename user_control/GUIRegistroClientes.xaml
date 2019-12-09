@@ -13,28 +13,69 @@
              TextOptions.TextRenderingMode="Auto"
              Background="{DynamicResource MaterialDesignPaper}"
              FontFamily="{DynamicResource MaterialDesignFont}"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="720" d:DesignWidth="1000">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
+        <Grid Background="#303F9F" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="23*"/>
+                <RowDefinition Height="157*"/>
+            </Grid.RowDefinitions>
 
-        <Label Content="Busqueda de clientes por RFC" HorizontalAlignment="Left" Margin="41,24,0,0" 
-               VerticalAlignment="Top" Height="26" Width="194"/>
+            <Label Content="Busqueda del Cliente" Grid.Row="0" 
+                   Margin="40,5,10,50" 
+                   FontSize="20" FontStyle="Italic" Foreground="White" FontWeight="Black" RenderTransformOrigin="0.3,0.276"/>
+            <Label Content="RFC: " Grid.Row="1"
+                   Margin="0 10 0 0"
+                   Foreground="White" FontSize="14"
+                   />
+            <TextBox x:Name="txtRFC_cliente" Grid.Row="1" HorizontalAlignment="Right" Background="White"
+                Height="25" Margin="0,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230"/>
 
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="41,74,0,0" TextWrapping="Wrap"  Name="tb_RFC"
-                 Text="RFC del cliente" VerticalAlignment="Top" Width="167"/>
+            <Button
+                x:Name="btBuscar_cliente"
+                Content="Buscar"
+                Margin="60,10,140,480"
+                Height="30"
+                Grid.Row="1"
+                />
+            <Button
+                x:Name="btAgregar_cliente"
+                Content="Agregar"
+                Margin="190,10,10,480"
+                Height="30"
+                Grid.Row="1" Click="btAgregar_cliente_Click"
+                />
 
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="41,136,0,0" VerticalAlignment="Top"  Name="bt_Buscar" 
-               Background="#303F9F" Width="74" RenderTransformOrigin="-0.34,0.547"/>
+            <Button
+                x:Name="btAgregar_solicitud"
+                Content="Agregar Solicitud"
+                Margin="36,200,33,292"
+                Height="30"
+                Grid.Row="1"
+                />
+        </Grid>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="710" Margin="5,0,0,0" VerticalAlignment="Top" Width="685">
+            <DataGrid x:Name="table_Clientes"  Height="635" Margin="10,20,10,20" HorizontalAlignment="Left" Width="auto"
+                      AlternatingRowBackground="AliceBlue">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding idcliente}"/>
+                    <DataGridTextColumn Header="RFC" Binding="{Binding rfc}"/>
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombres}"/>
+                    <DataGridTextColumn Header="Apellidos" Binding="{Binding apellidos}"/>
+                    <DataGridTextColumn Header="CURP" Binding="{Binding curp}"/>
+                    <DataGridTextColumn Header="COL" Binding="{Binding clientecol}"/>
+                    <DataGridTextColumn Header="Fecha nacimiento" Binding="{Binding fechanac}"/>
+                    <DataGridTextColumn Header="Fecha registro" Binding="{Binding fecharegistro}"/>
+                    <DataGridTextColumn Header="Firma" Binding="{Binding firmaelectronica}"/>
+                </DataGrid.Columns>
 
-        <Button Content="Agregar solicitud"  HorizontalAlignment="Left" Margin="41,403,0,13" Name="bt_solicitud"
-                Background="#303F9F" VerticalAlignment="Stretch" Width="auto" Height="auto" IsEnabled="False" Click="Bt_solicitud_Click"/>
+            </DataGrid>
+        </StackPanel>
 
-        <DataGrid Grid.Column="1" Name="clientes_view" HorizontalAlignment="Center" Height="auto" 
-                  VerticalAlignment="Center" Width="auto" SelectionChanged="Clientes_SelectionChanged">
-            
-        </DataGrid>
+
     </Grid>
 </UserControl>
