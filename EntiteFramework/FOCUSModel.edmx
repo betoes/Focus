@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FOCUSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FOCUSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="catalogobanco">
           <Key>
             <PropertyRef Name="idbanco" />
@@ -52,7 +52,6 @@
           <Property Name="nombres" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="apellidos" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="curp" Type="nvarchar" MaxLength="16" Nullable="false" />
-          <Property Name="clientecol" Type="nvarchar" MaxLength="45" />
           <Property Name="fechanac" Type="date" />
           <Property Name="fecharegistro" Type="date" />
           <Property Name="firmaelectronica" Type="nvarchar" MaxLength="20" />
@@ -83,10 +82,22 @@
             <PropertyRef Name="idcuentacliente" />
           </Key>
           <Property Name="idcuentacliente" Type="int" Nullable="false" />
-          <Property Name="numerotarjetadebito" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="numerotarjeta" Type="nvarchar" MaxLength="16" Nullable="false" />
           <Property Name="claveinterbancaria" Type="nvarchar" MaxLength="45" Nullable="false" />
           <Property Name="cliente_idcliente" Type="int" Nullable="false" />
           <Property Name="banco_idbanco" Type="int" Nullable="false" />
+          <Property Name="tipotarjeta" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="movilasociado" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="datoscontacto">
+          <Key>
+            <PropertyRef Name="id_contacto" />
+          </Key>
+          <Property Name="id_Cliente" Type="int" />
+          <Property Name="id_contacto" Type="int" Nullable="false" />
+          <Property Name="correo" Type="nvarchar" MaxLength="50" />
+          <Property Name="celular" Type="nvarchar" MaxLength="10" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="direccioncliente">
           <Key>
@@ -118,6 +129,16 @@
           </Key>
           <Property Name="idestado" Type="int" Nullable="false" />
           <Property Name="nombreestado" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <EntityType Name="identificacion">
+          <Key>
+            <PropertyRef Name="id_identificaion" />
+          </Key>
+          <Property Name="id_identificaion" Type="int" Nullable="false" />
+          <Property Name="tipo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="archivobinario" Type="varbinary(max)" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="cliente" Type="int" />
         </EntityType>
         <EntityType Name="municipio">
           <Key>
@@ -214,6 +235,18 @@
           <Property Name="apellidopaterno" Type="nvarchar" MaxLength="40" />
           <Property Name="apellidomaterno" Type="nvarchar" MaxLength="40" />
         </EntityType>
+        <Association Name="FK__identific__clien__3B0BC30C">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="identificacion" Type="Self.identificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="identificacion">
+              <PropertyRef Name="cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__solicitud__FK_co__078C1F06">
           <End Role="condiciones" Type="Self.condiciones" Multiplicity="0..1" />
           <End Role="solicitudcredito" Type="Self.solicitudcredito" Multiplicity="*" />
@@ -271,6 +304,18 @@
             </Principal>
             <Dependent Role="documentosolicitud">
               <PropertyRef Name="catalogodocumentos_numdocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Cliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="datoscontacto" Type="Self.datoscontacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="datoscontacto">
+              <PropertyRef Name="id_Cliente" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -487,9 +532,11 @@
           <EntitySet Name="condiciones" EntityType="Self.condiciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="credito" EntityType="Self.credito" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="cuentacliente" EntityType="Self.cuentacliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="datoscontacto" EntityType="Self.datoscontacto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="direccioncliente" EntityType="Self.direccioncliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="documentosolicitud" EntityType="Self.documentosolicitud" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="estado" EntityType="Self.estado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="identificacion" EntityType="Self.identificacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="municipio" EntityType="Self.municipio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pagoamortizacion" EntityType="Self.pagoamortizacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="politica" EntityType="Self.politica" Schema="dbo" store:Type="Tables" />
@@ -498,6 +545,10 @@
           <EntitySet Name="solicitudcredito" EntityType="Self.solicitudcredito" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="solicitudhaspolitica" EntityType="Self.solicitudhaspolitica" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="usuariosistema" EntityType="Self.usuariosistema" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__identific__clien__3B0BC30C" Association="Self.FK__identific__clien__3B0BC30C">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="identificacion" EntitySet="identificacion" />
+          </AssociationSet>
           <AssociationSet Name="FK__solicitud__FK_co__078C1F06" Association="Self.FK__solicitud__FK_co__078C1F06">
             <End Role="condiciones" EntitySet="condiciones" />
             <End Role="solicitudcredito" EntitySet="solicitudcredito" />
@@ -517,6 +568,10 @@
           <AssociationSet Name="FK_catalogosdocumentos_2" Association="Self.FK_catalogosdocumentos_2">
             <End Role="catalogodocumentos" EntitySet="catalogodocumentos" />
             <End Role="documentosolicitud" EntitySet="documentosolicitud" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Cliente" Association="Self.fk_Cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="datoscontacto" EntitySet="datoscontacto" />
           </AssociationSet>
           <AssociationSet Name="FK_cliente_2" Association="Self.FK_cliente_2">
             <End Role="cliente" EntitySet="cliente" />
@@ -587,8 +642,7 @@
             <End Role="credito" EntitySet="credito" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FOCUSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -645,7 +699,6 @@
           <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="curp" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="clientecol" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
           <Property Name="fechanac" Type="DateTime" Precision="0" />
           <Property Name="fecharegistro" Type="DateTime" Precision="0" />
           <Property Name="firmaelectronica" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -654,6 +707,8 @@
           <NavigationProperty Name="direccioncliente" Relationship="Self.FK_cliente_idcliente" FromRole="cliente" ToRole="direccioncliente" />
           <NavigationProperty Name="solicitudcredito" Relationship="Self.FK_idcliente_2" FromRole="cliente" ToRole="solicitudcredito" />
           <NavigationProperty Name="referenciacliente" Relationship="Self.FK_refcliente_idcliente" FromRole="cliente" ToRole="referenciacliente" />
+          <NavigationProperty Name="identificacion" Relationship="FOCUSModel.FK__identific__clien__3B0BC30C" FromRole="cliente" ToRole="identificacion" />
+          <NavigationProperty Name="datoscontacto" Relationship="FOCUSModel.fk_Cliente" FromRole="cliente" ToRole="datoscontacto" />
         </EntityType>
         <EntityType Name="condiciones">
           <Key>
@@ -685,12 +740,14 @@
             <PropertyRef Name="idcuentacliente" />
           </Key>
           <Property Name="idcuentacliente" Type="Int32" Nullable="false" />
-          <Property Name="numerotarjetadebito" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="claveinterbancaria" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="cliente_idcliente" Type="Int32" Nullable="false" />
           <Property Name="banco_idbanco" Type="Int32" Nullable="false" />
           <NavigationProperty Name="catalogobanco" Relationship="Self.FK_banco_1" FromRole="cuentacliente" ToRole="catalogobanco" />
           <NavigationProperty Name="cliente" Relationship="Self.FK_cliente_2" FromRole="cuentacliente" ToRole="cliente" />
+          <Property Name="numerotarjeta" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="tipotarjeta" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="movilasociado" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="direccioncliente">
           <Key>
@@ -1217,7 +1274,63 @@
             <End Role="solicitudcredito" EntitySet="solicitudcredito" />
             <End Role="solicitudhaspolitica" EntitySet="solicitudhaspolitica" />
           </AssociationSet>
+          <EntitySet Name="datoscontacto" EntityType="FOCUSModel.datoscontacto" />
+          <EntitySet Name="identificacion" EntityType="FOCUSModel.identificacion" />
+          <AssociationSet Name="FK__identific__clien__3B0BC30C" Association="FOCUSModel.FK__identific__clien__3B0BC30C">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="identificacion" EntitySet="identificacion" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Cliente" Association="FOCUSModel.fk_Cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="datoscontacto" EntitySet="datoscontacto" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="datoscontacto">
+          <Key>
+            <PropertyRef Name="id_contacto" />
+          </Key>
+          <Property Name="id_Cliente" Type="Int32" />
+          <Property Name="id_contacto" Type="Int32" Nullable="false" />
+          <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="celular" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="cliente" Relationship="FOCUSModel.fk_Cliente" FromRole="datoscontacto" ToRole="cliente" />
+        </EntityType>
+        <EntityType Name="identificacion">
+          <Key>
+            <PropertyRef Name="id_identificaion" />
+          </Key>
+          <Property Name="id_identificaion" Type="Int32" Nullable="false" />
+          <Property Name="tipo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="archivobinario" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="cliente" Type="Int32" />
+          <NavigationProperty Name="cliente1" Relationship="FOCUSModel.FK__identific__clien__3B0BC30C" FromRole="identificacion" ToRole="cliente" />
+        </EntityType>
+        <Association Name="FK__identific__clien__3B0BC30C">
+          <End Type="FOCUSModel.cliente" Role="cliente" Multiplicity="0..1" />
+          <End Type="FOCUSModel.identificacion" Role="identificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="identificacion">
+              <PropertyRef Name="cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Cliente">
+          <End Type="FOCUSModel.cliente" Role="cliente" Multiplicity="0..1" />
+          <End Type="FOCUSModel.datoscontacto" Role="datoscontacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idcliente" />
+            </Principal>
+            <Dependent Role="datoscontacto">
+              <PropertyRef Name="id_Cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1274,7 +1387,6 @@
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
                 <ScalarProperty Name="apellidos" ColumnName="apellidos" />
                 <ScalarProperty Name="curp" ColumnName="curp" />
-                <ScalarProperty Name="clientecol" ColumnName="clientecol" />
                 <ScalarProperty Name="fechanac" ColumnName="fechanac" />
                 <ScalarProperty Name="fecharegistro" ColumnName="fecharegistro" />
                 <ScalarProperty Name="firmaelectronica" ColumnName="firmaelectronica" />
@@ -1307,8 +1419,10 @@
           <EntitySetMapping Name="cuentacliente">
             <EntityTypeMapping TypeName="FOCUSModel.cuentacliente">
               <MappingFragment StoreEntitySet="cuentacliente">
+                <ScalarProperty Name="movilasociado" ColumnName="movilasociado" />
+                <ScalarProperty Name="tipotarjeta" ColumnName="tipotarjeta" />
+                <ScalarProperty Name="numerotarjeta" ColumnName="numerotarjeta" />
                 <ScalarProperty Name="idcuentacliente" ColumnName="idcuentacliente" />
-                <ScalarProperty Name="numerotarjetadebito" ColumnName="numerotarjetadebito" />
                 <ScalarProperty Name="claveinterbancaria" ColumnName="claveinterbancaria" />
                 <ScalarProperty Name="cliente_idcliente" ColumnName="cliente_idcliente" />
                 <ScalarProperty Name="banco_idbanco" ColumnName="banco_idbanco" />
@@ -1448,6 +1562,28 @@
                 <ScalarProperty Name="rol_idrol" ColumnName="rol_idrol" />
                 <ScalarProperty Name="apellidopaterno" ColumnName="apellidopaterno" />
                 <ScalarProperty Name="apellidomaterno" ColumnName="apellidomaterno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="datoscontacto">
+            <EntityTypeMapping TypeName="FOCUSModel.datoscontacto">
+              <MappingFragment StoreEntitySet="datoscontacto">
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="id_contacto" ColumnName="id_contacto" />
+                <ScalarProperty Name="id_Cliente" ColumnName="id_Cliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="identificacion">
+            <EntityTypeMapping TypeName="FOCUSModel.identificacion">
+              <MappingFragment StoreEntitySet="identificacion">
+                <ScalarProperty Name="cliente" ColumnName="cliente" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="archivobinario" ColumnName="archivobinario" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="id_identificaion" ColumnName="id_identificaion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

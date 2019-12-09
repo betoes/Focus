@@ -35,6 +35,10 @@ namespace SysCredito.model.dao
             return entities.cliente.Where(d => d.rfc == rfc).ToList();
         }
 
+        public cliente getCliente (int id)
+        {
+            return entities.cliente.Where(d => d.idcliente == id).FirstOrDefault();
+        }
        
         }
 

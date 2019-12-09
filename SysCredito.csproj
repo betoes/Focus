@@ -107,6 +107,9 @@
     <Compile Include="EntiteFramework\cuentacliente.cs">
       <DependentUpon>FOCUSModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EntiteFramework\datoscontacto.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EntiteFramework\direccioncliente.cs">
       <DependentUpon>FOCUSModel.tt</DependentUpon>
     </Compile>
@@ -130,6 +133,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FOCUSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntiteFramework\identificacion.cs">
+      <DependentUpon>FOCUSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EntiteFramework\municipio.cs">
       <DependentUpon>FOCUSModel.tt</DependentUpon>
@@ -164,6 +170,9 @@
     <Compile Include="user_control\GUIAmortizacion.xaml.cs">
       <DependentUpon>GUIAmortizacion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="user_control\GUIAperturaContrato.xaml.cs">
+      <DependentUpon>GUIAperturaContrato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="user_control\GUICaratulaContrato.xaml.cs">
       <DependentUpon>GUICaratulaContrato.xaml</DependentUpon>
     </Compile>
@@ -173,17 +182,29 @@
     <Compile Include="user_control\GUIDatosTrabajo.xaml.cs">
       <DependentUpon>GUIDatosTrabajo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="user_control\GUIDomicializacion.xaml.cs">
+      <DependentUpon>GUIDomicializacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIPagare.xaml.cs">
+      <DependentUpon>GUIPagare.xaml</DependentUpon>
+    </Compile>
     <Compile Include="user_control\GUIRegistroClientes.xaml.cs">
       <DependentUpon>GUIRegistroClientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="user_control\GUIRegistroMonto_Condiciones.xaml.cs">
       <DependentUpon>GUIRegistroMonto_Condiciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="user_control\GUIRegistroReferencias.xaml.cs">
+      <DependentUpon>GUIRegistroReferencias.xaml</DependentUpon>
+    </Compile>
     <Compile Include="user_control\GUISolicitudesAnalista.xaml.cs">
       <DependentUpon>GUISolicitudesAnalista.xaml</DependentUpon>
     </Compile>
     <Compile Include="user_control\GUISolicitudesGenerales.xaml.cs">
       <DependentUpon>GUISolicitudesGenerales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUISubirDocumentosSolicitud.xaml.cs">
+      <DependentUpon>GUISubirDocumentosSolicitud.xaml</DependentUpon>
     </Compile>
     <Compile Include="user_control\GUIVisualizacionDocumento.xaml.cs">
       <DependentUpon>GUIVisualizacionDocumento.xaml</DependentUpon>
@@ -201,11 +222,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ventana\GUISolicitud.xaml.cs">
+      <DependentUpon>GUISolicitud.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="user_control\GUIAmortizacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIAperturaContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -221,6 +249,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="user_control\GUIDomicializacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIPagare.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="user_control\GUIRegistroClientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -229,11 +265,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="user_control\GUIRegistroReferencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="user_control\GUISolicitudesAnalista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="user_control\GUISolicitudesGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUISubirDocumentosSolicitud.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -250,6 +294,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ventana\GUIcliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ventana\GUISolicitud.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

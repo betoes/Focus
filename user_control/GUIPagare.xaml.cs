@@ -1,5 +1,4 @@
-﻿using SysCredito.EntiteFramework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,16 +16,12 @@ using System.Windows.Shapes;
 namespace SysCredito.user_control
 {
     /// <summary>
-    /// Lógica de interacción para GUIAmortizacion.xaml
+    /// Lógica de interacción para GUIPagare.xaml
     /// </summary>
-    public partial class GUIAmortizacion : UserControl
+    public partial class GUIPagare : UserControl
     {
-        
-        private static FOCUSEntities db = new FOCUSEntities();
-        private solicitudcredito solicitud;
-        public GUIAmortizacion( solicitudcredito so)
+        public GUIPagare()
         {
-            this.solicitud = so;
             InitializeComponent();
         }
     }

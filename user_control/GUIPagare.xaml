@@ -1,0 +1,147 @@
+﻿<UserControl x:Class="SysCredito.user_control.GUIPagare"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SysCredito.user_control"
+             mc:Ignorable="d" d:DesignWidth="800"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}" Height="1086">
+    <Grid x:Name="Caratula" Margin="0,0,0,162" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#BDBDBD">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="303*"/>
+                <ColumnDefinition Width="497*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Pagaré" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold" Grid.Column="1" Margin="73,0,375,0"/>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock TextWrapping="Wrap"><Run Text="Por medio de este Pagaré prometo y me obligo a pagar incondicionalmente a la orden de o sucesorescausahabientessuso (en lo sucesivo el &quot;Acreedor&quot;), la cantidad de"/><InlineUIContainer>
+                </InlineUIContainer></TextBlock>
+            <TextBox Height="23" TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="1" TextWrapping="Wrap"><Run Text=".El pago del presente pagaré se llevará a
+cabo mediante amortizaciones consecutivas e ininterrumpidas,conforme a la descripciónque se hace en la tabla más abajo. Las amortizaciones serán pagaderas a partirde la fecha de
+suscripcióndel presente pagaré, en el domicilio del Acreedor ubicado en
+"/>
+            </TextBlock>
+        </Grid>
+
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="periocidad:"/>
+                    <CheckBox x:Name="cbsemanas" Content="semanas" Grid.Column="1"/>
+                    <CheckBox x:Name="cbquincenas" Content="quincenas" Grid.Column="2"/>
+                    <CheckBox x:Name="cbmese" Content="meses" Grid.Column="3"/>
+                    <CheckBox  x:Name="cbotro" Content="catorcenal" Grid.Column="4 "/>
+                </Grid>
+
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Dias de pago:"/>
+                    <CheckBox x:Name="cbsemanasd" Content="Los dias de cada semana" Grid.Column="1"/>
+                    <CheckBox x:Name="cbquincenasd" Content="Los dias quince y ultimo de cada mes" Grid.Column="2"/>
+                    <CheckBox x:Name="cbmesed" Content="Los dias ultimos de cada mes" Grid.Column="3"/>
+                    <CheckBox  x:Name="cbotrod" Content="Los dias de cada catorce dias" Grid.Column="4 "/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Monto de la amortizacion:"/>
+                    <TextBlock x:Name="tbmontoAmortizacion" Grid.Column="0"/>
+                    <Label Content="Numero de amortizaciones:" Grid.Column="1"/>
+                    <TextBlock x:Name="tbnumAmortizacion" Grid.Column="1"/>
+                    <Label Content="Tasa mensual de interes: %" Grid.Column="2"/>
+                    <TextBlock x:Name="tbtasainteres" Grid.Column="2"/>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="3" >
+            <TextBlock TextWrapping="Wrap">
+                El Suscriptorreconoce que las amortizaciones descritas en el presente Pagaré incluyenintereses sobre la suma principaldel mismo calculados a razón de la tasa mensual más el IVA correspondientea dichos intereses, cuyo porcentajese indica en la tabla arriba. Los intereses de este Pagaré se calcularán por el número exacto de días naturales transcurridos sobre la base del factor de un año de 360 días. La suma de principaly los intereses de este Pagaré se pagarán libres de cualquierdeducción por concepto de impuestos, derechos, retenciones o
+cargos presentes o futuros; pues en caso de ser aplicables, éstos serán por cuenta exclusiva del Suscriptor.Si el Suscriptorse encontrara obligadopor la leya realizar tales deducciones
+o retenciones, el Suscriptor pagará al Acreedor todas aquellas cantidades que sean necesarias para que éste o el tenedor del presente Pagaré, reciba efectivamente las cantidades que
+se le adeudan de conformidad con el presente Pagaré, y el Suscriptorentregará al Acreedor o al tenedor, en la fecha en que realice dicho pago, pruebas idóneas por escrito que demuestren
+la deducción a la que el pago se sujetó.
+En el supuesto de que el Suscriptor no pagare en su totalidad cualquier cantidad (incluyendointereses)pagadera por el Suscriptor al Acreedor en los vencimientos estipulados en este
+Pagaré, el Suscriptorse obligaincondicionalmente a pagar al Acreedor por concepto de gastos de cobranza la cantidad que resulte mayor entre: (i)el equivalente al 10% (diez por ciento)
+del saldo vencido en el periodo,y (ii)$500.00 M.N. (quinientospesos 00/100 M.N.)por cada amortización no pagada, cantidad que será pagadera el dfa hábil inmediato siguienteal cual
+se debía de haber realizado el pago de la amortización.
+Cualquier pago que de acuerdo con el presente Pagaré deba hacerse en un dfa que resulte inhábil, dicho pago deberá realizarse en el dfa hábil inmediato posterior. La falta de pago
+oportuno de cualquiercantidad adeudada de conformidad con este Pagaré, produciráel vencimiento anticipadodel mismo, por lo que el Acreedor o el tenedor del presente Pagaré podrá
+exigirdesde luego,el saldo total insoluto, más los intereses ordinarios y gastos de cobranza, en su caso.
+Para los efectos del artículo 128 de la LeyGeneral de Títulos y Operacionesde Crédito, el Suscriptorirrevocablemente extiende el término de presentación de éste Pagaré hasta el tercer
+aniversario de la fecha de pago de la última amortización, en el entendido, sin embargo, de que dicha prórrogano implicaque este Pagaré no pueda ser presentado para su pago en una
+fecha anterior. Asimismo el Suscriptorautoriza al Acreedor para que endose y/o transmita y/odescuente y/otransfiera y/oceda y/onegociey/oafecte y/ograve este pagaré y los derechos
+de crédito que ampara, en cualquiertiempoy lugar,sirviendo el presente como la más ampliay necesaria autorización del Suscriptoral respecto. El Suscriptor,expresamente renuncia a
+cualquierdiligencia,presentación, demanda, protesto, notificación o aviso de cualquiernaturaleza en relación con este Pagaré.
+El presente Pagaré se considerará suscrito de acuerdo con las leyes de los Estados Unidos Mexicanos, y consecuentemente, para todo lo relativo al presente Pagaré, el mismo se
+interpretaráde acuerdo con dichas leyes.
+Para todo lo relativo al presente Pagaré, el Suscriptorse someterá de manera expresa a la jurisdicciónde los Tribunales competentes de Xalapa,Veracruz o de la delegacióno municipio
+en donde se ubique el domicilio del Acreedor o del tenedor del presente Pagaré, por consiguiente, el Suscriptorrenuncia a cualquier otra jurisdicciónque por razón de su domicilio o
+cualquierotra causa le corresponda o pudierecorresponderle, ya sea en lo presente o futuro.
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="pagarefecha" Text="El siguiente pagare se suscribe en:"></TextBox>
+            <TextBlock Grid.Row="1" Text="EL SUBSCRIPTOR"></TextBlock>
+             <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="nombrecliente" Text="Nombre:"></TextBox>
+                <TextBox Text="Firma:" Grid.Column="1"></TextBox>
+            </Grid>
+            
+        </Grid>
+        
+    </Grid>
+</UserControl>

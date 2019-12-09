@@ -30,7 +30,7 @@
                Background="#303F9F" Width="74" RenderTransformOrigin="-0.34,0.547"/>
 
         <Button Content="Agregar solicitud"  HorizontalAlignment="Left" Margin="41,403,0,13" Name="bt_solicitud"
-                Background="#303F9F" VerticalAlignment="Stretch" Width="auto" Height="auto" IsEnabled="False"/>
+                Background="#303F9F" VerticalAlignment="Stretch" Width="auto" Height="auto" IsEnabled="False" Click="Bt_solicitud_Click"/>
 
         <DataGrid Grid.Column="1" Name="clientes_view" HorizontalAlignment="Center" Height="auto" 
                   VerticalAlignment="Center" Width="auto" SelectionChanged="Clientes_SelectionChanged">

@@ -46,7 +46,11 @@
         <AssociationConnector Association="FOCUSModel.FK_analista_3" ManuallyRouted="false" />
         <AssociationConnector Association="FOCUSModel.FK_asesor_4" ManuallyRouted="false" />
         <AssociationConnector Association="FOCUSModel.FK_Table_1_solicitudcredito" ManuallyRouted="false" />
-      </Diagram>
+        <EntityTypeShape EntityType="FOCUSModel.datoscontacto" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="FOCUSModel.identificacion" Width="1.5" PointX="3" PointY="33.625" />
+        <AssociationConnector Association="FOCUSModel.FK__identific__clien__3B0BC30C" />
+        <AssociationConnector Association="FOCUSModel.fk_Cliente" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

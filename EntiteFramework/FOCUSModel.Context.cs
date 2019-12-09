@@ -44,5 +44,7 @@ namespace SysCredito.EntiteFramework
         public virtual DbSet<solicitudcredito> solicitudcredito { get; set; }
         public virtual DbSet<solicitudhaspolitica> solicitudhaspolitica { get; set; }
         public virtual DbSet<usuariosistema> usuariosistema { get; set; }
+        public virtual DbSet<datoscontacto> datoscontacto { get; set; }
+        public virtual DbSet<identificacion> identificacion { get; set; }
     }
 }

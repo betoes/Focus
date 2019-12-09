@@ -69,5 +69,10 @@ namespace SysCredito.user_control
         {
 
         }
+
+        private void Bt_solicitud_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

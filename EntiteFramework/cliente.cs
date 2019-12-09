@@ -22,6 +22,8 @@ namespace SysCredito.EntiteFramework
             this.direccioncliente = new HashSet<direccioncliente>();
             this.solicitudcredito = new HashSet<solicitudcredito>();
             this.referenciacliente = new HashSet<referenciacliente>();
+            this.identificacion = new HashSet<identificacion>();
+            this.datoscontacto = new HashSet<datoscontacto>();
         }
     
         public int idcliente { get; set; }
@@ -29,7 +31,6 @@ namespace SysCredito.EntiteFramework
         public string nombres { get; set; }
         public string apellidos { get; set; }
         public string curp { get; set; }
-        public string clientecol { get; set; }
         public Nullable<System.DateTime> fechanac { get; set; }
         public Nullable<System.DateTime> fecharegistro { get; set; }
         public string firmaelectronica { get; set; }
@@ -44,5 +45,9 @@ namespace SysCredito.EntiteFramework
         public virtual ICollection<solicitudcredito> solicitudcredito { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<referenciacliente> referenciacliente { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<identificacion> identificacion { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<datoscontacto> datoscontacto { get; set; }
     }
 }

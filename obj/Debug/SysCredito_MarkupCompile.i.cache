@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\App.xaml
-131105945234
+19-174573107
 2166165327
-44707339563
+52-1340744486
 27-717995503
-MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;
+MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUIAperturaContrato.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIDomicializacion.xaml;user_control\GUIPagare.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUIRegistroReferencias.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUISubirDocumentosSolicitud.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;ventana\GUISolicitud.xaml;
 
-False
+True
 

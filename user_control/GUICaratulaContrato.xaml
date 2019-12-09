@@ -12,18 +12,32 @@
              TextOptions.TextFormattingMode="Ideal"
              TextOptions.TextRenderingMode="Auto"
              Background="{DynamicResource MaterialDesignPaper}"
-             FontFamily="{DynamicResource MaterialDesignFont}"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <FlowDocumentScrollViewer Name="caratula_document">
-            <FlowDocument>
+             FontFamily="{DynamicResource MaterialDesignFont}" d:DesignWidth="800" Height="925.312">
 
-                <Paragraph TextAlignment="Center" FontWeight="Black">
-                    <Run Text="Caratula de contrato"/>
-                </Paragraph>
+    <Grid x:Name="Caratula" Height="920">
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="CARÁTULA DE CONTRATO" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+        </Grid>
 
-            </FlowDocument>
-        </FlowDocumentScrollViewer>
     </Grid>
 </UserControl>

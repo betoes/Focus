@@ -52,7 +52,7 @@ namespace SysCredito
                     {
 
                         int rol = usuarioSistema.rol_idrol;
-
+                        Console.WriteLine(rol);
                         switch (rol)
                         {
                             case 1:
@@ -62,7 +62,8 @@ namespace SysCredito
                                break;
         
                             case 2:
-                                GUIcliente guiCliente = new GUIcliente();
+                                
+                                GUISolicitud guiCliente = new GUISolicitud();
                                 guiCliente.Show();
                                 closeWindows();
                                 break;
