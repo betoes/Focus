@@ -11,31 +11,47 @@ namespace SysCredito.model.dao
 {
     class ClienteDAO
     {
-        private static String query;
-        private static SqlConnection conn = null;
-        private static SqlCommand command;
-        private static SqlDataReader reader = null;
 
-        private static FOCUSEntities entities = new FOCUSEntities();
-
-        public ClienteDAO()
-        {
-
-        }
         public static List<cliente> ObtenerClientes()
         {
-            Console.WriteLine(entities.cliente.ToList().Count());
-            return entities.cliente.ToList();
+            using (FOCUSEntities db = new FOCUSEntities())
+            {
+                List<cliente> lista = db.cliente.ToList();
+                Console.WriteLine(lista.Count);
+                return lista;
 
-
+            }
         }
 
-        public static List<cliente> buscarCliente(String rfc)
+        public static int totalClientes()
         {
-            return entities.cliente.Where(d => d.rfc == rfc).ToList();
+            using (FOCUSEntities db = new FOCUSEntities())
+            {
+                List<cliente> lista = db.cliente.ToList();
+                return lista.Count;
+
+            }
         }
 
-       
+        public static cliente buscarCliente(String rfc)
+        {
+            using (FOCUSEntities db = new FOCUSEntities())
+            {
+                return db.cliente.Where(d => d.rfc == rfc).FirstOrDefault();
+            }
+
+        }
+
+        public static Boolean agregarCliente(cliente cliente)
+        {
+
+            using (FOCUSEntities db = new FOCUSEntities())
+            {
+                db.cliente.Add(cliente);
+                db.SaveChanges();
+                return true;
+            }
         }
 
     }
+}

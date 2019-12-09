@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SysCredito.EntiteFramework;
+using SysCredito.model.dao;
 
 namespace SysCredito.user_control
 {
@@ -23,6 +25,23 @@ namespace SysCredito.user_control
         public GUIDatosTrabajo()
         {
             InitializeComponent();
+        }
+
+        public centrotrabajo GetCentrotrabajo()
+        {
+            centrotrabajo centrotrabajo = new centrotrabajo();
+            centrotrabajo.nombreempresa = txtEmpresa.Text;
+            centrotrabajo.numempleado = noEmpleado.Text;
+            centrotrabajo.direccion = txtDireccion.Text;
+            centrotrabajo.antiguedad = System.Convert.ToInt32(txtAntiguedad.Text);
+            centrotrabajo.ocupacion = txtOcupacion.Text;
+            centrotrabajo.desempeño = txtDesempeño.Text;
+            centrotrabajo.quincenauno = DateTime.Parse(txtUltimaq.Text);
+            centrotrabajo.quincenados = DateTime.Parse(txtPenultimaq.Text);
+            centrotrabajo.municipio_idmunicipio = 1;
+
+
+            return centrotrabajo;
         }
 
     }

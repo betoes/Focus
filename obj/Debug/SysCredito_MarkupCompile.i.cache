@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\obj\Debug\
+C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\obj\Debug\
 SysCredito
 none
 false
 DEBUG;TRACE
-C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\App.xaml
-131105945234
+C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\App.xaml
+17-1525672791
 2166165327
-44707339563
-27-717995503
-MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;
+541936937542
+27487065840
+MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosBancarios.xaml;user_control\GUIDatosContacto.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIDireccionCliente.xaml;user_control\GUIDocumentos.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;
 
 False
 

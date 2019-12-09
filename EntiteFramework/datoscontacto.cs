@@ -12,17 +12,14 @@ namespace SysCredito.EntiteFramework
     using System;
     using System.Collections.Generic;
     
-    public partial class cuentacliente
+    public partial class datoscontacto
     {
-        public int idcuentacliente { get; set; }
-        public string claveinterbancaria { get; set; }
-        public int cliente_idcliente { get; set; }
-        public int banco_idbanco { get; set; }
-        public string tipotarjeta { get; set; }
-        public string movilasociado { get; set; }
-        public string numerotarjeta { get; set; }
+        public Nullable<int> id_Cliente { get; set; }
+        public int id_contacto { get; set; }
+        public string correo { get; set; }
+        public string celular { get; set; }
+        public string telefono { get; set; }
     
-        public virtual catalogobanco catalogobanco { get; set; }
         public virtual cliente cliente { get; set; }
     }
 }

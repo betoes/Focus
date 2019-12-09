@@ -1,8 +1,5 @@
-﻿
-using SysCredito.model.db;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,24 +7,23 @@ using SysCredito.EntiteFramework;
 
 namespace SysCredito.model.dao
 {
-    class DatosTrabajoDAO
+    class DireccionDAO
     {
-        public static void addTrabajo(centrotrabajo centrotrabajo)
+        public static void addDireccion(direccioncliente direccioncliente) 
         {
             using(FOCUSEntities db = new FOCUSEntities())
             {
-                centrotrabajo.idcentrotrabajo = getTotalTrabajo() + 1;
-                db.centrotrabajo.Add(centrotrabajo);
+                direccioncliente.iddireccioncliente = totalDirecciones() + 1;
+                db.direccioncliente.Add(direccioncliente);
                 db.SaveChanges();
             }
         }
 
-        public static int getTotalTrabajo()
+        public static int totalDirecciones()
         {
-
             using (FOCUSEntities db = new FOCUSEntities())
             {
-                return db.centrotrabajo.ToList().Count;
+                return db.direccioncliente.ToList().Count;
             }
         }
     }

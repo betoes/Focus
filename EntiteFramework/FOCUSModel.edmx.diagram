@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c8fcf388ddc3410cb9bed36b9c3ad0a2" Name="Diagram1">
+      <Diagram DiagramId="c8fcf388ddc3410cb9bed36b9c3ad0a2" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="FOCUSModel.catalogobanco" Width="1.5" PointX="3.75" PointY="29.125" IsExpanded="true" />
         <EntityTypeShape EntityType="FOCUSModel.catalogodocumentos" Width="1.5" PointX="9" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="FOCUSModel.catalogostatus" Width="1.5" PointX="3.75" PointY="6.5" IsExpanded="true" />
@@ -46,6 +46,10 @@
         <AssociationConnector Association="FOCUSModel.FK_analista_3" ManuallyRouted="false" />
         <AssociationConnector Association="FOCUSModel.FK_asesor_4" ManuallyRouted="false" />
         <AssociationConnector Association="FOCUSModel.FK_Table_1_solicitudcredito" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FOCUSModel.datoscontacto" Width="1.5" PointX="1.375" PointY="2.375" />
+        <AssociationConnector Association="FOCUSModel.fk_Cliente" />
+        <EntityTypeShape EntityType="FOCUSModel.identificacion" Width="1.5" PointX="3.25" PointY="0.75" />
+        <AssociationConnector Association="FOCUSModel.FK__identific__clien__3B0BC30C" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
