@@ -11,10 +11,16 @@ false
 DEBUG;TRACE
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\App.xaml
 22-1925003359
+17-1525672791
+//C:\Users\marai\Documents\IngSoftware\7-Desarrollo de software\Focus\App.xaml
+//19-174573107
 2166165327
 60900552871
 27487065840
-MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIControlUsuarios.xaml;user_control\GUIDatosBancarios.xaml;user_control\GUIDatosContacto.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIDireccionCliente.xaml;user_control\GUIDocumentos.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAdministradorPrincipal.xaml;ventana\GUIAnalistaPrincipal.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;ventana\GUIEditarUsuario.xaml;ventana\GUIRegistroUsuario.xaml;
+MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosBancarios.xaml;user_control\GUIDatosContacto.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIDireccionCliente.xaml;user_control\GUIDocumentos.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;
+//52-1340744486
+//27-717995503
+//MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUIAperturaContrato.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIDomicializacion.xaml;user_control\GUIPagare.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUIRegistroReferencias.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUISubirDocumentosSolicitud.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;ventana\GUISolicitud.xaml;
 
 True
 

@@ -54,7 +54,6 @@ namespace SysCredito
                         int rol = usuarioSistema.rol_idrol;
                         String nombreUsuario = usuarioSistema.nombre;
                         String noEmpleado = usuarioSistema.numempleado;
-
                         switch (rol)
                         {
                             case 1:
