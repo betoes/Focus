@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="SysCredito.user_control.GUIRegistroClientes"
+﻿<UserControl x:Class="SysCredito.user_control.GUIControlUsuarios"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -25,52 +25,51 @@
                 <RowDefinition Height="157*"/>
             </Grid.RowDefinitions>
 
-            <Label Content="Busqueda del Cliente" Grid.Row="0" 
+            <Label Content="Usuarios del Sistema" Grid.Row="0" 
                    Margin="40,5,10,50" 
                    FontSize="20" FontStyle="Italic" Foreground="White" FontWeight="Black" RenderTransformOrigin="0.3,0.276"/>
-            <Label Content="RFC: " Grid.Row="1"
+            <Label Content="No.Empleado: " Grid.Row="1"
                    Margin="0 10 0 0"
                    Foreground="White" FontSize="14"
                    />
-            <TextBox x:Name="txtRFC_cliente" Grid.Row="1" HorizontalAlignment="Right" Background="White"
-                Height="25" Margin="0,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230"/>
+            <TextBox x:Name="txtNoEmpleado" Grid.Row="1" HorizontalAlignment="Right" Background="White"
+                Height="25" Margin="0,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187"/>
 
             <Button
-                x:Name="btBuscar_cliente"
+                x:Name="btBuscar_usuario"
                 Content="Buscar"
-                Margin="60,10,140,480"
+                Margin="150,62,50,536"
                 Height="30"
-                Grid.Row="1" Click="btBuscar_cliente_Click"
+                Grid.Row="1" Click="btBuscar_usuario_Click"
                 />
             <Button
-                x:Name="btAgregar_cliente"
+                x:Name="btAgregar_usuario"
                 Content="Agregar"
-                Margin="190,10,10,480"
+                Margin="150,113,50,485"
                 Height="30"
-                Grid.Row="1" Click="btAgregar_cliente_Click"
+                Grid.Row="1" Click="btAgregar_usuario_Click" 
+                />
+            <Button
+                x:Name="btEditar_usuario"
+                Content="Editar"
+                Margin="150,168,50,430"
+                Height="30"
+                Grid.Row="1" Click="btEditar_usuario_Click"
                 />
 
-            <Button
-                x:Name="btAgregar_solicitud"
-                Content="Agregar Solicitud"
-                Margin="36,200,33,292"
-                Height="30"
-                Grid.Row="1"
-                />
         </Grid>
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="710" Margin="5,0,0,0" VerticalAlignment="Top" Width="685">
-            <DataGrid x:Name="table_Clientes"  Height="635" Margin="10,20,10,20" HorizontalAlignment="Left" Width="auto"
-                      AlternatingRowBackground="AliceBlue">
+            <DataGrid x:Name="table_Usuarios"  Height="635" Margin="10,20,10,20" HorizontalAlignment="Left" Width="auto"
+                      AlternatingRowBackground="AliceBlue" 
+                      ItemsSource="{Binding Path=usuariosistema}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding idcliente}"/>
-                    <DataGridTextColumn Header="RFC" Binding="{Binding rfc}"/>
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombres}"/>
-                    <DataGridTextColumn Header="Apellidos" Binding="{Binding apellidos}"/>
-                    <DataGridTextColumn Header="CURP" Binding="{Binding curp}"/>
-                    <DataGridTextColumn Header="COL" Binding="{Binding clientecol}"/>
-                    <DataGridTextColumn Header="Fecha nacimiento" Binding="{Binding fechanac}"/>
-                    <DataGridTextColumn Header="Fecha registro" Binding="{Binding fecharegistro}"/>
-                    <DataGridTextColumn Header="Firma" Binding="{Binding firmaelectronica}"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding idusuariosistema}"/>
+                    <DataGridTextColumn Header="NoEmpleado" Binding="{Binding numempleado}"/>
+                    <DataGridTextColumn Header="Fecha Registro" Binding="{Binding fecharegistro}"/>
+                    <DataGridTextColumn Header="Rol" Binding="{Binding rol_idrol}"/>
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}"/>
+                    <DataGridTextColumn Header="Apellido Paterno" Binding="{Binding apellidopaterno}"/>
+                    <DataGridTextColumn Header="Apellido Materno" Binding="{Binding apellidomaterno}"/>
                 </DataGrid.Columns>
 
             </DataGrid>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Jethran Gomez\Documents\7semestre\Software\Proyecto\FC\Focus\App.xaml
-17-1525672791
+22-1925003359
 2166165327
-541936937542
+60900552871
 27487065840
-MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIDatosBancarios.xaml;user_control\GUIDatosContacto.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIDireccionCliente.xaml;user_control\GUIDocumentos.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;
+MainWindow.xaml;user_control\GUIAmortizacion.xaml;user_control\GUICaratulaContrato.xaml;user_control\GUIControlUsuarios.xaml;user_control\GUIDatosBancarios.xaml;user_control\GUIDatosContacto.xaml;user_control\GUIDatosPersonales.xaml;user_control\GUIDatosTrabajo.xaml;user_control\GUIDireccionCliente.xaml;user_control\GUIDocumentos.xaml;user_control\GUIRegistroClientes.xaml;user_control\GUIRegistroMonto_Condiciones.xaml;user_control\GUISolicitudesAnalista.xaml;user_control\GUISolicitudesGenerales.xaml;user_control\GUIVisualizacionDocumento.xaml;user_control\prueba.xaml;ventana\GUIAdministradorPrincipal.xaml;ventana\GUIAnalistaPrincipal.xaml;ventana\GUIAsesorprincipal.xaml;ventana\GUIcliente.xaml;ventana\GUIEditarUsuario.xaml;ventana\GUIRegistroUsuario.xaml;
 
-False
+True
 

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SysCredito.EntiteFramework;
+using SysCredito.model.dao;
 
 namespace SysCredito.user_control
 {
@@ -24,6 +25,8 @@ namespace SysCredito.user_control
         public GUIDireccionCliente()
         {
             InitializeComponent();
+            cbMunicipio.ItemsSource = MunicipioDAO.getMunicipios();
+
         }
 
         public direccioncliente GetDireccioncliente()
@@ -33,9 +36,15 @@ namespace SysCredito.user_control
             direccioncliente.colonia = txtcolonia.Text;
             direccioncliente.numexterior = txtnoExt.Text;
             direccioncliente.numinterior = txtnoInt.Text;
-            direccioncliente.municipio_idmunicipio = 1;
+            switch (cbMunicipio.Text)
+            {
+                case "Xalapa":
+                    direccioncliente.municipio_idmunicipio = 1;
+                    break;
 
+            }
             return direccioncliente;
         }
+
     }
 }

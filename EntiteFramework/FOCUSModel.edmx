@@ -235,6 +235,7 @@
           <Property Name="rol_idrol" Type="int" Nullable="false" />
           <Property Name="apellidopaterno" Type="nvarchar" MaxLength="40" />
           <Property Name="apellidomaterno" Type="nvarchar" MaxLength="40" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="40" />
         </EntityType>
         <Association Name="FK__identific__clien__3B0BC30C">
           <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
@@ -903,6 +904,7 @@
           <NavigationProperty Name="rol" Relationship="Self.FK_ssrol_rol" FromRole="usuariosistema" ToRole="rol" />
           <NavigationProperty Name="solicitudcredito" Relationship="Self.FK_analista_3" FromRole="usuariosistema" ToRole="solicitudcredito" />
           <NavigationProperty Name="solicitudcredito1" Relationship="Self.FK_asesor_4" FromRole="usuariosistema" ToRole="solicitudcredito" />
+          <Property Name="nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_banco_1">
           <End Role="catalogobanco" Type="Self.catalogobanco" Multiplicity="1" />
@@ -1558,6 +1560,7 @@
           <EntitySetMapping Name="usuariosistema">
             <EntityTypeMapping TypeName="FOCUSModel.usuariosistema">
               <MappingFragment StoreEntitySet="usuariosistema">
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="idusuariosistema" ColumnName="idusuariosistema" />
                 <ScalarProperty Name="numempleado" ColumnName="numempleado" />
                 <ScalarProperty Name="claveacceso" ColumnName="claveacceso" />

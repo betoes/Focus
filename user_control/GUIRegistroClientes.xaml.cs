@@ -42,6 +42,20 @@ namespace SysCredito.user_control
             GUIcliente guiCliente = new GUIcliente();
             guiCliente.Show();
         }
-        
+
+        private void btBuscar_cliente_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtRFC_cliente.Text != "")
+            { 
+                cliente clientes = ClienteDAO.buscarCliente(txtRFC_cliente.Text);
+                List<cliente> clienterfc = new List<cliente>();
+                clienterfc.Add(clientes);
+
+                table_Clientes.ItemsSource = clienterfc;
+            } else
+            {
+                MessageBox.Show("    Ingrese un rfc    ");
+            }
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace SysCredito.EntiteFramework
         public int rol_idrol { get; set; }
         public string apellidopaterno { get; set; }
         public string apellidomaterno { get; set; }
+        public string nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<credito> credito { get; set; }

@@ -16,23 +16,27 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="14*"/>
-            <RowDefinition Height="*"/>
-
+            <RowDefinition Height="9*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="datos" Width="auto" Height="auto" HorizontalAlignment="Stretch" Margin="0,0,0,42">
-            <DataGrid.Columns>
-                <DataGridTextColumn Width="*" Header="Id solicitud"/>
+        <StackPanel HorizontalAlignment="Left" Height="410" Margin="5,0,0,0" VerticalAlignment="Top" Width="785" Grid.RowSpan="2">
+            <DataGrid x:Name="TablaSolicitudes"  Height="371" Margin="10,20,-92,20" HorizontalAlignment="Left" Width="767"
+                      AlternatingRowBackground="AliceBlue">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding idsolicitudcredito}"/>
+                    <DataGridTextColumn Header="IDCliente" Binding="{Binding cliente_idcliente}"/>
+                    <DataGridTextColumn Header="Monto Parcial" Binding="{Binding montoparcialidad}"/>
+                    <DataGridTextColumn Header="Analista" Binding="{Binding analista_idusuariosistema}"/>
+                    <DataGridTextColumn Header="Saldo restante" Binding="{Binding saldorestante}"/>
+                    <DataGridTextColumn Header="Monto" Binding="{Binding monto}"/>
+                    <DataGridTextColumn Header="Estatus" Binding="{Binding status}"/>
+                </DataGrid.Columns>
 
-                <DataGridTextColumn Width="2*" Header="Cliente"/>
-                <DataGridTextColumn Width="*" Header="Monto"/>
-                <DataGridTextColumn Width="*" Header="Fecha"/>
+            </DataGrid>
+        </StackPanel>
 
-            </DataGrid.Columns>
-
-        </DataGrid>
-        <Button Content="Elegir" HorizontalAlignment="Center"  Width="auto"  Grid.Row="1"/>
+        <Button Content="Elegir" HorizontalAlignment="Center"  Width="68" Margin="660,0,72,3" Height="Auto" Grid.Row="1"/>
 
     </Grid>
 </UserControl>

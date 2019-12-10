@@ -52,17 +52,31 @@ namespace SysCredito
                     {
 
                         int rol = usuarioSistema.rol_idrol;
+                        String nombreUsuario = usuarioSistema.nombre;
+                        String noEmpleado = usuarioSistema.numempleado;
 
                         switch (rol)
                         {
                             case 1:
                                 GUIAsesorprincipal guiAsesorprincipal = new GUIAsesorprincipal();
                                 guiAsesorprincipal.Show();
+                                guiAsesorprincipal.lbNombre.Content = nombreUsuario;
+                                guiAsesorprincipal.lbNoEmpleado.Content = noEmpleado;
                                 closeWindows();
                                break;
         
                             case 2:
-                                
+                                GUIAnalistaPrincipal gUIAnalistaPrincipal = new GUIAnalistaPrincipal();
+                                gUIAnalistaPrincipal.Show();
+                                gUIAnalistaPrincipal.lbNombre.Content = nombreUsuario;
+                                gUIAnalistaPrincipal.lbNoEmpleado.Content = noEmpleado;
+                                closeWindows();
+                                break;
+                            case 3:
+                                GUIAdministradorPrincipal gUIAdministradorPrincipal = new GUIAdministradorPrincipal();
+                                gUIAdministradorPrincipal.Show();
+                                gUIAdministradorPrincipal.lbNombre.Content = nombreUsuario;
+                                gUIAdministradorPrincipal.lbNoEmpleado.Content = noEmpleado;
                                 closeWindows();
                                 break;
 

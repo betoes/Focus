@@ -170,12 +170,16 @@
     <Compile Include="model\dao\DatosTrabajoDAO.cs" />
     <Compile Include="model\dao\DireccionDAO.cs" />
     <Compile Include="model\dao\DocumentosDAO.cs" />
+    <Compile Include="model\dao\MunicipioDAO.cs" />
     <Compile Include="model\dao\UsuarioSistemaDAO.cs" />
     <Compile Include="user_control\GUIAmortizacion.xaml.cs">
       <DependentUpon>GUIAmortizacion.xaml</DependentUpon>
     </Compile>
     <Compile Include="user_control\GUICaratulaContrato.xaml.cs">
       <DependentUpon>GUICaratulaContrato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\GUIControlUsuarios.xaml.cs">
+      <DependentUpon>GUIControlUsuarios.xaml</DependentUpon>
     </Compile>
     <Compile Include="user_control\GUIDatosBancarios.xaml.cs">
       <DependentUpon>GUIDatosBancarios.xaml</DependentUpon>
@@ -213,6 +217,12 @@
     <Compile Include="user_control\prueba.xaml.cs">
       <DependentUpon>prueba.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ventana\GUIAdministradorPrincipal.xaml.cs">
+      <DependentUpon>GUIAdministradorPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ventana\GUIAnalistaPrincipal.xaml.cs">
+      <DependentUpon>GUIAnalistaPrincipal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ventana\GUIAsesorprincipal.xaml.cs">
       <DependentUpon>GUIAsesorprincipal.xaml</DependentUpon>
     </Compile>
@@ -223,6 +233,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ventana\GUIEditarUsuario.xaml.cs">
+      <DependentUpon>GUIEditarUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ventana\GUIRegistroUsuario.xaml.cs">
+      <DependentUpon>GUIRegistroUsuario.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -232,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="user_control\GUICaratulaContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user_control\GUIControlUsuarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -283,11 +303,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ventana\GUIAdministradorPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ventana\GUIAnalistaPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ventana\GUIAsesorprincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ventana\GUIcliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ventana\GUIEditarUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ventana\GUIRegistroUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

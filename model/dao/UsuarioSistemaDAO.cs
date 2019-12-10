@@ -39,6 +39,41 @@ namespace SysCredito.model.dao
 
             return registrado;
         }
-    
+
+        public static List<usuariosistema> getUsuarios()
+        {
+            using(FOCUSEntities db = new FOCUSEntities())
+            {
+                return db.usuariosistema.ToList();
+            }
+        }
+
+        public static int getUsuariostotal()
+        {
+            using (FOCUSEntities db = new FOCUSEntities())
+            {
+                return db.usuariosistema.ToList().Count;
+            }
+        }
+
+        public static void editarUsuario(usuariosistema usuariosistema)
+        {
+            using (FOCUSEntities db = new FOCUSEntities())
+            {
+                db.usuariosistema.Attach(usuariosistema);
+                db.SaveChanges();
+            }
+
+        }
+
+        public static usuariosistema GetUsuariosistema(String numEmpleado)
+        {
+            using (FOCUSEntities db = new FOCUSEntities())
+            {
+                usuariosistema usuario = new usuariosistema();
+                usuario = db.usuariosistema.Where(d => d.numempleado == numEmpleado).FirstOrDefault();
+                return usuario;
+            }
+        } 
     }
 }

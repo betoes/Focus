@@ -35,7 +35,7 @@ namespace SysCredito.user_control
             datoscontacto.correo = txtCorreo.Text;
             datoscontacto.celular = txtCelular.Text;
             datoscontacto.telefono = txtTelefono.Text;
-
+            
             return datoscontacto;
         }
 
